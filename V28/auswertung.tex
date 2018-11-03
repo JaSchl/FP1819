@@ -1,0 +1,128 @@
+\input{header.tex}
+\begin{document}
+\section{Results}
+\subsection{Determination of the resonance points}
+The resonance points can be taken from the resonance curves, which were drawn by the
+XY-plotter. These are atteched in the appendix.
+With the calibration of the x-axis every cm is linear propotional to 50\,mA, which is used for
+the data of the table \ref{fig:Resonanzstelle} .
+\newline
+The values of the parallel orientation are placed in every first line of each frequency,
+the values of the antiparallel orientation in the second.
+\begin{table}
+  \centering
+  \caption{Distance and related currents of the resoncance points }
+  \begin{tabular}{c c c c}
+    \toprule
+    {$\su{\nu_e}$\,/\,MHz}& $\su{x}\,/\,\mathrm{cm}$ & {I\,/\,$\mathrm{mA}$} & {B\,/\,$\su{\mu}$T} \\
+    \midrule
+     14,798 & 8,3 & 415 & 582 \\
+            & 7,2 & 360 & 505 \\
+     19,448 & 11,0 & 550 & 771 \\
+            & 10,0 & 500 & 701 \\
+     23,888 & 12,6 & 630 & 884 \\
+            & 11,5 & 575 & 807 \\
+     29,448 & 15,7 & 785 & 1101 \\
+            & 14,5 & 725 & 1017 \\
+    \bottomrule
+    \label{fig:Resonanzstelle}
+  \end{tabular}
+\end{table}
+\newline
+The magnetic field is calculated with equation \ref{eqn:1}.
+
+\subsection{Determinaton of the Landé g-factor and the earth's magnetic field}
+The earths's magnetic field can be calculated with
+\begin{equation*}
+    B_{earth}=\frac{1}{2}(B_p-B_a).
+\end{equation*}
+In result the values of the magnetic field are listed in table \ref{fig:Erde}
+\begin{table}
+  \centering
+  \caption{Values of the magnetic field}
+  \begin{tabular}{c c}
+    \toprule
+    {$\su{\nu_e}$\,/\,MHz} & {$\su{B_{erd}}$\,/\,$\su{\mu}$T} \\
+    \midrule
+     14,798 & 38,5 \\
+     19,448 & 35,0 \\
+     23,888 & 38,5 \\
+     29,448 & 42,0 \\
+    \bottomrule
+    \label{fig:Erde}
+  \end{tabular}
+\end{table}
+\newline
+The mean value, which can be estimated with
+\begin{equation}
+  \bar{x} = \frac{1}{n} \sum{x_n}
+  \label{eqn:Mittelwert}
+\end{equation}
+and
+\begin{equation}
+\upsigma = \frac{1}{\sqrt{n}} \sqrt{\frac{\sum{(x_n - \bar{x})^2}}{n-1} },
+\label{eqn:Standardabweichung}
+\end{equation}
+is
+\begin{align*}
+  \bar{B}_{earth} = 38,75\pm1,24.
+\end{align*}
+The Lande g-factor can be calculated with
+\begin{equation*}
+    g  = \frac{h\nu_e}{B\mu_b}.
+\end{equation*}
+In result the eight g-factors for each frequency and orientation are listed
+in table \ref{fig:Lande}
+\begin{table}
+  \centering
+  \caption{Values of the g-factor}
+  \begin{tabular}{c c c}
+    \toprule
+    {$\su{\nu_e}$\,/\,MHz}& $\su{x}\,/\,\mathrm{cm}$ & {g} \\
+    \midrule
+     14,798 & 8,3 & 1,82 \\
+            & 7,2 & 2,09 \\
+     19,448 & 11,0 & 1,80 \\
+            & 10,0 & 1,98 \\
+     23,888 & 12,6 & 1,93 \\
+            & 11,5 & 2,12 \\
+     29,448 & 15,7 & 1,59 \\
+            & 14,5 & 1,72 \\
+    \bottomrule
+    \label{fig:Lande}
+  \end{tabular}
+\end{table}
+\newline
+The mean value of the g-factor is calculated with \ref{eqn:Mittelwert} and \ref{eqn:Standardabweichung}.
+It amounts of
+\begin{align*}
+    \bar{g} = 1,88\pm0,06.
+\end{align*}
+
+\newpage
+\section{Discussion}
+All of the results are presented and compared to their theoretical value in table \ref{fig:theo}.
+\begin{table}
+  \centering
+  \caption{Comparison between measures and theoretical value}
+  \begin{tabular}{c c c c}
+    \toprule
+     & $\text{Measures}$ & $\text{Theoretical value} $& $\text{Deviation in percent}$\\
+    \midrule
+     $\su{B_{earth}}$ & 38,75\pm1,24 $\su{\mu}$T & 44 \cite{1} $\su{\mu}$T & 11,93 \% \\
+     g & 1,88\pm0,06 & 1,761 \cite{2} & 6,76 \% \\
+    \bottomrule
+    \label{fig:theo}
+  \end{tabular}
+\end{table}
+\newline
+Eventhough the deviation in percent is with 6,67\% for the g-factor and 11,93\% for the
+earth's magnetic field small, there are some sources of error in the implentimantation aswell as in the analysis
+of the resonance curves. The adjustment of the bridge voltage was imprecised because it was not possible
+to regulate the voltage close to zero. At some point the resonance curve was hard to find and additionally
+the drawing with the XY-plotter made the resonance point even more flatter. By analysing the curves by hand
+it was, especially for the 23,888\,MHz frequency, difficult to get exact values of the coordinate paper.
+\newline
+Nevertheless the generated results are close to the theoretical values despite of some inaccuracies in the
+implentimantation and analysis by hand.
+\end{document}
