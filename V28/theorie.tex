@@ -1,11 +1,62 @@
+\input{header.tex}
+\begin{document}
 \section{Zielsetzung}
 
-The purpose of the experiment is to determine the magnetic moment of an free electron.
+The purpose of the experiment is to determine the magnetic moment of a free electron.
 To implement this the electronspin-resonance is used.
 
 
 \section{Theorie}
+In quantum mechanics the status of particles is described by a wave function.
+\begin{equation}
+  \psi_{n,l,m}(r,\theta,\phi) = R_{n,l}(r) \cdot \Theta_{l,m}(\theta) \cdot \Phi_m(\phi)
+\end{equation}
+R is the radial part, $\Theta$ discribes the polar angle and
+$\Phi$ is the part of the azimuth angle.
+n, l, m are quantum numbers.
+n is the main number and describes the niveaus of energy.
+l is the number of orbital angular momentum.
+m characterise the orientation of the system and can take the numbers 2l+1.
 
+The current density defined by
+\begin{equation}
+  S = \frac{\hbar}{2im_0}\cdot (\psi* \nabla \psi - \psi \nabla \psi* )
+\end{equation}
+It results of moving electrons on the shell of an atom.
+The resulting magnetic field have a magentic moment
+\begin{equation*}
+  \mu_z =\mu_b \cdot m
+\end{equation*}
+$\mu_b$ is the Bohr magneton.
+Figure \ref{fig:muz} shows the geometric thoughts to deduce the magentic moment.
+
+In a homogen magnetic field is the magnetic momentum of the electron shell
+connected to the outer magnetic field.
+The quantization of the direction leads to the zeeman-effect.
+It describes the split of the energy niveau in teh outa magnetic field.
+It is shown in figure \ref{fig:eniveau}
+A split of an electron without orbital angular momentum is not expectet.
+But it happens a split into two niveaus.
+So the electron has to have a spin.
+The electron is a fermion and have the spin  $|S| = \sfrac{1}{2}$.
+The z-component of the magnetic moment can take two directions wich are determined by
+the quantum number $m_s \in [-1/2, 1/2]$ .
+\begin{equation*}
+  \mu_{sz} = -gm_s\mu_B
+\end{equation*}
+The energy difference between two niveaus is
+\begin{equation}
+  \Delta E = g\mu_B B
+\end{equation}
+g is the gyromagnetic relation or Lande- Factor.
+
+In thermal equilibrium the occupation of the two energy niveaus is described
+by the Boltzmann-statistic. The lower niveau is on a higher level than the upper.
+The Energy $\Delta E$ is given to the system by inserting high frequenzy HF-quantum.
+The Spin of the electrons is turning over into a higher state.
+The changing of the spin changes the sample magnetization.
+It can be read out by a bridge circuit. 
 
 
 \section{Durchführung}
+\end{document}
