@@ -69,16 +69,16 @@ Die Probe hat eine Dicke von D=$1,36\,\mathrm{mm}$ und N=$1,2\cdot 10^{18}\,\mat
     \begin{tabular}{c c c c c}
       \toprule
       $\lambda/ \si{\micro\meter}$ & $\theta_1 / °$ & $\theta_2 /°$ & $\theta_{\symup{reell}}/°$ &
-      $\Delta\theta_{\symup{norm}}/\frac{°}{\mathrm{m}}$\\
+      $\Delta\theta_{\symup{norm}}/\frac{1}{\mathrm{m}}$\\
       \midrule
-       1,06  & 189 & 186 & 1,5 & 1102,94\\
-       1,29  & 190 & 188 & 1,0 & 735,29\\
-       2,34  & 211 & 210 & 0,5 & 367,64\\
-       2,51  & 213 & 210 & 1,5 & 1102,94\\
-       2,9   & 306 & 283 & 11,5& 8455,88\\
-       3,18  & 223 & 208 & 7,5 & 5514,70\\
-       3,985 & 320 & 312 & 4,0 & 2941,18\\
-       5,3   & 231 & 216 & 7,5 & 5,51\\
+       1,06  & 189 & 186 & 1,5 & 19,25 \\
+       1,29  & 190 & 188 & 1,0 & 12,83  \\
+       2,34  & 211 & 210 & 0,5 & 6,42  \\
+       2,51  & 213 & 210 & 1,5 & 19,25 \\
+       2,9   & 306 & 283 & 11,5& 147,58\\
+       3,18  & 223 & 208 & 7,5 & 96,25 \\
+       3,985 & 320 & 312 & 4,0 & 51,33 \\
+       5,3   & 231 & 216 & 7,5 & 96,25 \\
        \bottomrule
     \end{tabular}
   \end{table}
@@ -93,16 +93,16 @@ Die Probe hat eine Dicke von D=$1,36\,\mathrm{mm}$ und N=$1,2\cdot 10^{18}\,\mat
     \begin{tabular}{c c c c c}
       \toprule
       $\lambda/ \si{\micro\meter}$ & $\theta_1 / °$ & $\theta_2 /°$ & $\theta_{\symup{reell}}/°$ &
-      $\Delta\theta_{\symup{norm}}/\frac{°}{\mathrm{m}}$\\
+      $\Delta\theta_{\symup{norm}}/\frac{1}{\mathrm{m}}$\\
       \midrule
-       1,06  & 208 & 207 & 0,5 & 0,10\\
-       1,29  & 200 & 198 & 1,0 & 0,20\\
-       2,34  & 208 & 206 & 1,0 & 0,20\\
-       2,51  & 209 & 207 & 1,0 & 0,20\\
-       2,9   & 234 & 228 & 4,0 & 0,59\\
-       3,18  & 238 & 220 & 9,0 & 1,76\\
-       3,985 & 223 & 215 & 4,0 & 0,78\\
-       5,3   & 259 & 250 & 4,5 & 0,88\\
+       1,06  & 208 & 207 & 0,5 & 1,71\\
+       1,29  & 200 & 198 & 1,0 & 3,42\\
+       2,34  & 208 & 206 & 1,0 & 3,42\\
+       2,51  & 209 & 207 & 1,0 & 3,42\\
+       2,9   & 234 & 228 & 4,0 & 10,25\\
+       3,18  & 238 & 220 & 9,0 & 30,74\\
+       3,985 & 223 & 215 & 4,0 & 13,66\\
+       5,3   & 259 & 250 & 4,5 & 15,37\\
        \bottomrule
     \end{tabular}
   \end{table}
@@ -127,18 +127,18 @@ Diese Winkel, aufgetragen gegen die Wellenlänge zum Quadrat, werden in Abbildun
   \centering
   \caption{n-dotiertes GaAs}
   \label{tab:dif}
-  \begin{tabular}{c c c c c}
+  \begin{tabular}{c c }
     \toprule
-    $\lambda/ \si{\micro\meter}$ & $\theta_{\symup{diff}} / \frac{°}{m}$ \\
+    $\lambda/ \si{\micro\meter}$ & $\theta_{\symup{diff}} / \frac{1}{m}$ \\
     \midrule
-     1,06  & 1005,09\\
-     1,29  & 539,60\\
-     2,34  & 171,95\\
-     2,51  & 907,25\\
-     2,9   & 7868,80\\
-     3,18  & 3753,45\\
-     3,985 & 2158,40\\
-     5,3   & 4634,08\\
+     1,06  & 17,54\\
+     1,29  & 9,42\\
+     2,34  & 3,00\\
+     2,51  & 15,83\\
+     2,9   & 137,34\\
+     3,18  & 65,51\\
+     3,985 & 37,67\\
+     5,3   & 80,88\\
      \bottomrule
   \end{tabular}
 \end{table}
@@ -150,29 +150,28 @@ Diese Winkel, aufgetragen gegen die Wellenlänge zum Quadrat, werden in Abbildun
 \end{figure}
 Die linerare Regression wurde mit
 \begin{equation*}
-  \theta(\lambda^2) = a\cdot \lambda^2 +b
+  \theta(\lambda^2) = a\cdot \lambda^2
 \end{equation*}
 durchgeführt.
-Die Parameter lauten:
+Der Parameter lautet:
 \begin{align*}
-  a &= (1,0\pm0,7) \cdot 10^{3}\,\mathrm{\frac{1}{\mu m^3}}\\
-  b &= (-0,1\pm2,1)\cdot 10^{3}\,\mathrm{\frac{1}{m}}
+  a &= (17\pm12) \,\mathrm{\frac{1}{\mu m^3}}\\
 \end{align*}
 
 Mit Formel \ref{eqn:meff} ergibt sich
 \begin{equation*}
-a = \frac{e_0^3}{8\pi^2\epsilon_0c^2}\frac{1}{m*^2}\frac{NB}{n}
+a = \frac{e_0^3}{8\pi^2\epsilon_0c^3}\frac{1}{m*^2}\frac{NB}{n}
 \end{equation*}
-Dabei ist n der Brechungsindex und liegt bei n=3,6.\cite{Brechungsindex}
+Dabei ist n der Brechungsindex und liegt bei n=3,6\cite{Brechungsindex} für eine Wellenlänge von ungefähr 886\, nm \cite{n2}.
 Nach der effektiven Masse umgestellt wird die Formel zu
 \begin{equation*}
-  m* =\sqrt{\frac{e_0^3}{8\pi^2\epsilon_0c^2}\frac{1}{a}\frac{NB}{n}}.
+  m* =\sqrt{\frac{e_0^3}{8\pi^2\epsilon_0c^3}\frac{1}{a}\frac{NB}{n}}.
 \end{equation*}
 Der Wert für B wird aus \ref{eqn:bfeld} übernommen und der für N liegt,
 wie oben bereits erwähnt, bei N=$1,2\cdot 10^{18}\,\mathrm{cm^3}$.
 Somit lautet das Ergebnis für die effektive Masse:
 \begin{equation*}
-  m* =(6,0\pm 2,1)\cdot10^{-34}\, \mathrm{kg}
+  m* =(4,5\pm 1,6)\cdot10^{-33}\, \mathrm{kg}
 \end{equation*}
 Der Fehler berechnet sich mit
 \begin{equation*}
@@ -191,7 +190,7 @@ sodass nur noch ein sehr kleines Signal an den Differenzverstärker gelangen kon
 Die Interferenzfilter waren teilweise sehr stark verschmutzt.
 Hinzu kam, dass der Lichtstrahl eine Leichte Ablenkung hatte, was die Justierung stark erschwert hat.
 Ein Minimum war somit Teilweise nicht wirklich zu erkennen, sodass die aufgenommenen Werte eine sehr große Fehlerbelastung haben.
-Des weiteren war das Ablesen der Winkel nur auf 1° genau möglich war.
+Des weiteren war das Ablesen der Winkel aufgrund einer Fehlbedienung nur auf 1° genau möglich.
 Das erklärt auch die Ergebnisse aus den Abbildungen \ref{fig:b} und \ref{fig:dif}.
 
 Die Werte liegen sehr verstreut und nicht auf einer Geraden,
@@ -202,6 +201,6 @@ und Aufgrund von Überhitzung zeitweise komplett zusammen brach.
 Dies führt schließlich auch dazu, dass der Fehler der berechneten effektiven Masse extrem hoch ist.
 Mit dem Literaturwert $\sfrac{m*}{m_e}=0,067$ \cite{meff} und der berechneten effektiven Masse
 \begin{equation*}
-  \frac{m*}{m_e} = (6,59 \pm 2,31)\cdot 10^{-4}
+  \frac{m*}{m_e} = (4,94 \pm 1,76)\cdot 10^{-3}
 \end{equation*}
-ergibt sich eine Abweichung von $98,36\%$.
+ergibt sich eine Abweichung von $92,63\%$.

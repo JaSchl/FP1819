@@ -40,7 +40,7 @@ L1, t11, t12 = np.genfromtxt('ndotiertGaAs.txt', unpack=True)
 
 ##Drehwinkel
 D1= 1.36*10**(-3)
-t1= (t11-t12)/2
+t1= ((t11-t12)/2)*(np.pi/180)
 t1= (t1/D1)
 print('Drehwinkel:')
 print(t1)
@@ -49,7 +49,7 @@ print(t1)
 L2, t21, t22 = np.genfromtxt('hochreinGaAs.txt', unpack=True)
 ##Drehwinkel
 D2 = 5.11*10**(-3)
-t2= (t21-t22)/2
+t2= ((t21-t22)/2)*((np.pi/180))
 t2 = (t2/D2)
 print(t2)
 
@@ -59,7 +59,7 @@ plt.figure(2)
 plt.plot(L1, t1, 'r+',label='n-dotiert')
 plt.plot(L2, t2, 'b+',label='hochrein')
 plt.ylabel(r"${\theta / \mathrm{\frac{1}{m}}}$")
-plt.xlabel(r"${\lambda ^2 / \mathrm{\mu m}}$")
+plt.xlabel(r"${\lambda ^2 / \mathrm{\mu m^2}}$")
 #plt.plot(L2plot, f(L2plot, *paramsI) , 'b-', label='Regression')
 plt.tight_layout
 plt.legend(loc="best")
@@ -72,10 +72,11 @@ print("thetaDifferenz:")
 print(tn)
 
 l, t = np.genfromtxt('tdiff.txt' , unpack=True)
+#t = np.pi/180
 
-def f(t, m, n):
-    return m*t + n
-paramsI, covarianceI = curve_fit(f, l, t)
+def f(tn, m, n):
+    return m*tn + n
+paramsI, covarianceI = curve_fit(f, l, tn)
 errorsI = np.sqrt(np.diag(covarianceI))
 
 m = ufloat(paramsI[1], errorsI[1])
@@ -85,10 +86,10 @@ print(m)
 print(n)
 L2plot = np.linspace(0, 6)
 plt.figure(3)
-plt.plot(l, t,'r+', label="Messwerte")
+plt.plot(l, tn,'r+', label="Messwerte")
 #Achsen beschriften!!!!!!
-plt.ylabel(r"${\theta_{diff} / \mathrm{\frac{°}{m}}}$")
-plt.xlabel(r"${\lambda / \mathrm{\mu m}}$")
+plt.ylabel(r"${\theta_{diff} / \mathrm{\frac{1}{m}}}$")
+plt.xlabel(r"${\lambda^2 / \mathrm{\mu m^2}}$")
 plt.plot(L2plot, f(L2plot, *paramsI) , 'b-', label='Regression')
 plt.tight_layout
 plt.legend(loc="best")

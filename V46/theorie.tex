@@ -1,9 +1,8 @@
 
 
-
 \section{Zielsetzung}
  Mithilfe der Faraday-Rotation, eine magneto-optische Untersuchung, können Informationen über die Banstrukturen von Halbleitern
- gewonnen werden. Ziel dieses Versuchs ist es, die effektive Masse von Elektronen des Halbleiters Galliumarsenit zu bestimmen.
+ gewonnen werden. Ziel dieses Versuchs ist es, die effektive Masse von Elektronen des Halbleiters Galliumarsenid zu bestimmen.
 \section{Theorie}
 \subsection{Effektive Masse}
 Für die Beschreibung der Bandstrukturen von Halbleitern ist es häufig ausreichend
@@ -17,7 +16,7 @@ Dort wird die Elektronenenergie $\su{\varepsilon}$ in Abhängigkeit der Wellenza
   \end{figure}
  \newline
 Zur Vereinfachung der Funktion $\varepsilon(\vec{k})$, welche die Form der Energiebänder beschreibt, wird diese in eine Taylorreihe entwickelt
-und davon ausgegsagen, dass die untere Bandkante im Koordinatenursprung liegt. Daraus folgt
+und davon ausgegangen, dass die untere Bandkante im Koordinatenursprung liegt. Daraus folgt
 \begin{equation}
  \varepsilon(\vec{k}) = \varepsilon(0) + \frac{1}{2} \sum_{i=1}^3
   \bigg(\frac{\partial \epsilon^2}{\partial k_i^2}\bigg)_{k=0} k_i^2 + ...\
@@ -30,8 +29,9 @@ wird deutllich, dass die effektive Masse, welche durch
 \begin{equation*}
   m_i^* \coloneqq \frac{\hbar^2}{\Big\{\frac{\partial^2\epsilon}{\partial k_i^2}\Big\}_{k=0}}
 \end{equation*}
-beschrieben wird, die Dimension einer Masse haben muss. Dies ermöglicht, dass die Elektronen in den Bändern
-wie freie Elektronen behandelt werden können. In der Schrödinger-Gleichung wird dann
+beschrieben wird, die Dimension einer Masse haben muss. Für einige Kristalle ist die Symmetrie so hoch, dass die $m_i^*$ gleich sind und diese deswegen als $m^*$ geschrieben
+werden können. \newline
+Dies ermöglicht, dass die Elektronen in den Bändern wie freie Elektronen behandelt werden können. In der Schrödinger-Gleichung wird dann
 die Masse durch die effektive Masse ersetzt und die Quantenmechanik freier Teilchen ist für die eigentlich
 gebundenen Elektronen gültig.
 
@@ -52,7 +52,7 @@ gebundenen Elektronen gültig.
           &=\frac{L\omega}{2}\left(\frac{1}{v_{\text{ph}_{\text{R}}}}-\frac{1}{v_{\text{ph}_{\text{L}}}}\right)\\
 \end{align*}
 berechnet. Dabei ist L die Kristalllänge und $\omega$ die Frequenz des einfallenden Strahls. \newline
-Der zirkuläre Doppelbrechung entsteht durch induzierte Dipolmoment, da permanente Dipole aufgrund ihrer
+Die zirkuläre Doppelbrechung entsteht durch induzierte Dipolmoment, da permanente Dipole aufgrund ihrer
 längeren Relaxationszeit der Frequenz des Lichtes nicht folgen können. \newline
 Die Dipole erzeugen eine Polarisation des Kristalls der Form
 \begin{equation*}
@@ -71,33 +71,40 @@ Der Tensor sieht dann wie folgt aus
       \end{pmatrix}.
 \end{equation*}
 Der Rotationswinkel wird durch
-\begin{equation*}
+\begin{equation}
   \theta = \frac{L \omega}{2 c n} \chi_{xy}.
-\end{equation*}
+  \label{eqn:1}
+\end{equation}
+
 genähert.
 
 \subsection{Zirkuläre Doppelbrechung bei optisch inaktiver Materie}
 Wie bereits erwähnt, kommt es bei optisch aktiver Materie zur zirkulären Doppelbrechung.
 Bei optisch inaktiver Materie hingegen kann es zur zirkulären Doppelbrechung nur durch das Anlegen eines Magnetfeldes
 kommen. Dies wird als Faraday-Effekt bezeichnet. \newline
-Durch die Vernachlässigung der Dämpfungseffekte und des Einflusses des Magnetfelds
+Durch die Vernachlässigung der Dämpfungseffekte und des Einflusses des Magnetfelds der elektromagnetischen Lichtwelle
 wird die Verschiebungspolarisation durch
 \begin{equation*}
     \vec{P} = -Ne_0\vec{r}
 \end{equation*}
-beschrieben.
-Der Rotationswinkel kann wie folgt berechnet werden
+beschrieben, wobei $\vec{r}$ die Auslenkung der Elektronen aus der Gleichgewichtslage beschreibt.
+Damit kann das Tensorelement $\chi_{\text{xy}}$ für Gleichung \ref{eqn:1} bestimmt werden.
+\newline
+Mit der Bewegungsgleichung für ein gebundenes Elektron mit der Masse m und Ladung $\su{e_0}$
+\begin{equation*}
+    m\frac{d^2\vec{r}}{dt^2} + K\vec{r} = -e_0\vec{E}(r) -e_0\frac{d\vec{r}}{dt}\times\vec{B}
+\end{equation*}
+kann der Rotationswinkel wie folgt bestimmt werden
 \begin{equation*}
   \theta(\lambda)=\frac{2\pi^2 \text{e}_0^3 \text{c}}{\epsilon_0}\frac{1}{{m^*}^2
   \lambda^2 \omega{_0}^4}\frac{N B L}{n}
 \end{equation*}
-und ist proportional zur Flussdichte B, der Probenlänge L und der Anzhal der Ladungsträger N
-pro Volumeneinheit. Für den Fall $\omega_0 \rightarrow 0$ folgt für die nahezu freien Ladungsträger
- ein Drehwinkel der Polarisationseben von
+und ist damit proportional zur Flussdichte B, der Probenlänge L und der Anzahl der Ladungsträger N
+pro Volumeneinheit. Für den Fall $\omega_0 \rightarrow 0$ der Resonanzfrequenz folgt für die nahezu freien Ladungsträger
+ein Drehwinkel der Polarisationseben von
 \begin{equation}
   \theta_{\text{frei}}(\lambda)=\frac{\text{e}_0^3}{8 \pi^2 \epsilon_0 \text{c}^3}
   \frac{\lambda^2}{{m^*}^2}\frac{N L B}{n}.
-	\label{eqn:meff}
 \end{equation}
 Dieser Zusammenhang ist durch das Ersetzen der Masse auch für Kristallelektronen gültig und wird deswegen zur Bestimmung der
 effektiven Masse verwendet.
@@ -112,20 +119,22 @@ Der Versuchsaufbau ist in Abbildung \ref{fig:aufbau} dargestellt.
     \label{fig:aufbau}
   \end{figure}
  \newline
-Das emittiere Infratrotlicht einer Halogen-Lampe wird von einer Kondensorlinse gebündelt,
-durch einen Interferenzfilter, welche aus einer Strahlung ein kleinen Wellenlängenbereich herausfiltern,
-monochromatisiert und durch ein Glan-Thompson-Prismen aus Kalkspat linear polarisiert.
+Das emittierte Infrarotlicht einer Halogen-Lampe wird von einer Kondensorlinse gebündelt,
+durch einen Interferenzfilter, welche aus einer Strahlung einen kleinen Wellenlängenbereich herausfiltert,
+monochromatisiert und durch ein Glan-Thompson-Prisma aus Kalkspat linear polarisiert.
 Die scheibenförmige Probe wird in einen Elektromagneten eingeführt, welcher an ein Konstantstromgerät
-angeschlossen ist. Ein weiteres Glan-Thompson-Prisma hinter dem Elektormagneten spaltet den Lichtstrahl
-in zwei senktecht zueinander polarisierte Teilstrahlen auf. Mithilfe von Photowiderständen kann die Intensität
-beider Strahlen bestimmt werden. Die Signalspannung werden dann über einen Differenzverstärker und einem
-Selektivverstärker auf einem Oszilloskop sichtbar gemacht. Dabei ist der Selektivverstärker auf die
-Zerhackerfrequenz abgestimmt.
+angeschlossen ist. Ein weiteres Glan-Thompson-Prisma hinter dem Elektromagneten spaltet den Lichtstrahl
+in zwei senkrecht zueinander polarisierte Teilstrahlen auf. Durch einen Lichtzerhacker, welcher den Photowiderständen
+vorgelagert ist, fällt eine Wechselspannung statt einer Gleichspannung an den Photowiderständen ab.
+Mit diesen kann die Intensität beider Strahlen bestimmt werden.
+Die Differenz der abfallenden Signalspannungen werden dann über einen Differenzverstärker und einem
+Selektivverstärker auf einem Oszilloskop sichtbar gemacht. Dies führt dazu, dass die Störspannungen
+weitgehend unterdrückt werden. Der Selektivverstärker ist dabei auf die Zerhackerfrequenz abgestimmt.
 \section{Versuchsdurchführung}
 Zur Justierung der Apparatur mit sichtbaren Licht wird zunächst der Interferenzfilter
 entfernt. \newline
 Als erstes wird die Genauigkeit der Polarisationsvorrichtung überprüft. Dafür wird das zweite Glan-Thompson-Prisma
-um seine vertikale Achse so gedreht, dass keine Lichtintenstiät für den durchgehenden Strahl des ersten Glan-Thompson-Prisma
+um seine vertikale Achse so gedreht, dass keine Lichtintenstiät für den durchgehenden Strahl des ersten Glan-Thompson-Prismas
 messbar ist. \newline
 Durch die Einstellung des Abstandes zwischen der Sammellinse und den Photowiderständen wird die Abbildung der Lichtquelle
 auf die lichtempfindlichen Flächen der Widerstände überprüft.\newline
@@ -145,6 +154,6 @@ Danach wird das Magnetfeld umgepolt und der Winkel erneut abgelesen. Mit der For
     \theta= \frac{1}{2}(\theta_1-\theta_2)
 \end{equation*}
 ist der Rotationswinkel zu berechnen.\newline
-Die Rotationswinkel werden für hochreines und n-dotiertes Galliumarsenit für acht Wellenlängen im nahen
+Die Rotationswinkel werden für hochreines und n-dotiertes Galliumarsenid für acht Wellenlängen im nahen
 Infrarotbereich gemessen.\newline
 Mit einer Hallsonde wird in Richtung des einfallenden Strahles das maximale Magnetfeld ausgemessen.
