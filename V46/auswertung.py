@@ -53,8 +53,8 @@ t2= ((t21-t22)/2)*((np.pi/180))
 t2 = (t2/D2)
 print(t2)
 
-#L1= L1**2
-#L2 = L2**2
+L1= L1**2
+L2 = L2**2
 plt.figure(2)
 plt.plot(L1, t1, 'r+',label='n-dotiert')
 plt.plot(L2, t2, 'b+',label='hochrein')
@@ -73,7 +73,7 @@ print(tn)
 
 l, t = np.genfromtxt('tdiff.txt' , unpack=True)
 #t = np.pi/180
-
+l=l**2
 def f(tn, m, n):
     return m*tn + n
 paramsI, covarianceI = curve_fit(f, l, tn)
@@ -84,7 +84,7 @@ n = ufloat(paramsI[0], errorsI[0])
 print('Parameter')
 print(m)
 print(n)
-L2plot = np.linspace(0, 6)
+L2plot = np.linspace(0, 28)
 plt.figure(3)
 plt.plot(l, tn,'r+', label="Messwerte")
 #Achsen beschriften!!!!!!
@@ -108,3 +108,6 @@ print(const.e, N, c, const.c, n, n2)
 print()
 print('Meff:')
 print(Meff)
+Meffme = Meff/ (9.109*10**(-31))
+print('Meff durch me =')
+print(Meffme)
