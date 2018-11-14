@@ -1,13 +1,20 @@
 \input{header.tex}
-\usepackage{upgreek}
-\usepackage{mhchem}
 \begin{document}
 \section{Zielsetzung}
-
+Ziel dieses Versuchs ist es die Streuung von $\su{\alpha}$-Teilchen an einer Goldfolie zu bestimmen.
+Dafür wird der differentielle Wirkungsquerschnitt der Streuung und die Abhängigkeit der Kernladungszahl Z
+des Targetmaterials untersucht. \newline
+Aus der Streuung kann zusätzlich durch die Energieverlustmessung der $\su{\alpha}$-Teilchen
+auch die Foliendicke bestimmt werden.
 \section{Theorie}
 Beim Durchlauf von positiv geladenen $\su{\alpha}$-Teilchen durch Materie kann es zu
 zwei unterschiedlichen Wechselwirkungen kommen. Die erste Wechselwirkung findet mit negaitv geladenen Hüllenelektron
 statt und die zweite mit dem positiven Atomkern.
+\newline
+Bei der Wechselwirkung zwischen $\su{\alpha}$-Teilchen und dem Hüllenelektronen kommt es durch
+Anregungs und Ionisationsprozesse zu Energieabgabe.
+Es wird angenommen, dass es aufgrund der größeren Masse der $\su{\alpha}$-Teilchen gegenüber
+der Elektronenmasse zu keiner Ablenkung der $\su{\alpha}$-Teilchen kommt.
 \newline
 Die Bethe-Bloch-Gleichung beschreibt den Energieverlust
 \begin{equation*}
@@ -18,17 +25,31 @@ Hierbei gibt N die Atomdichte, $\su{m_0}$ die Ruheenergie des Hüllenelektrons, 
 des Targetmaterials an.
 
 Bei der Streuung der $\su{\alpha}$-Teilchen am Atomkern kommt es durch die Coulombkraft zu
-einer Richtungsänderung um den Streuwinkel $\su{\Theta}$. \newline
+einer Richtungsänderung um den Streuwinkel $\su{\Theta}$. Es wird nach der 1. Born'schen Näherung davon
+ausgegangen, dass die Mehrfachstreuung der $\su{\alpha}$-Teilchen vernachlässigt werden kann.
+\newline
 Dieser Streuwinkel lässt sich mit der Rutherford-Streuformel berechnen
 \begin{equation*}
     \frac{d\sigma}{d\Omega}(\Uptheta) = \frac{1}{(4\pi \epsilon_0)^2} \Big(\frac{zZe^2}{4E_{\alpha}}\Big)^2 \frac{1}{\sin^4\frac{\Uptheta}{2}}.
 \end{equation*}
-
+Der differentielle Wirkungsquerschnitt $\frac{d\sigma}{d\Omega}$ beschreibt gerade die Intensitätsverteilung
+der gestreuten $\su{\alpha}$-Teilchen in den Raumwinkel $\su{\Uptheta}$.
 \section{Versuchsaufbau}
 Der Versuchsaufbau ist in Abbildung \ref{fig:aufbau} dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[width = 12 cm]{pictures/aufbau.png}
+  \caption{Darstellung des Versuchsaufbaus}
+  \label{fig:aufbau}
+\end{figure}
 \newline
 Der Versuch findet im Vakuum statt, da die $\su{\alpha}$-Strahlung in Luft nur eine sehr geringe
 Reichweite hat. Als $\su{\alpha}$-Strahler dient ein $\ce{^{241}}\su{Am}$-Präparat.
 Die dort austretenen Teilchen werden kollimiert, damit diese senktrecht auf die Goldfolie treffen.
 An dieser Folie werden die Teilchen gestreut und von einem Surface-Barrier-Detektor detektiert.
+
+\section{Durchführung}
+Zu Beginn des Versuches wird die Apparatur über eine Vakuumspumpe evakuiert.
+Um einen geraden Durchtritt der $\su{\alpha}$-Teilchen sicher zu stellen, wird der Detektor zuerst
+in den Strahlengang richtig hereingestellt.
 \end{document}
