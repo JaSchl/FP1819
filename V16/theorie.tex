@@ -1,5 +1,4 @@
-\input{header.tex}
-\begin{document}
+
 \section{Zielsetzung}
 Ziel dieses Versuchs ist es die Streuung von $\su{\alpha}$-Teilchen an einer Goldfolie zu bestimmen.
 Dafür wird der differentielle Wirkungsquerschnitt der Streuung und die Abhängigkeit der Kernladungszahl Z
@@ -17,10 +16,10 @@ Es wird angenommen, dass es aufgrund der größeren Masse der $\su{\alpha}$-Teil
 der Elektronenmasse zu keiner Ablenkung der $\su{\alpha}$-Teilchen kommt.
 \newline
 Die Bethe-Bloch-Gleichung beschreibt den Energieverlust
-\begin{equation*}
+\begin{equation}
     -\frac{dE}{dx} = -\frac{4\pi e^4z^2NZ}{m_0v^2(4\pi \epsilon_0)^2} \ln \frac{2m_0v^2}{I}
 \label{eqn:bethebloch}
-\end{equation*}
+\end{equation}
 der $\su{\alpha}$-Teilchen beim Durchgang durch die Materie.
 Hierbei gibt N die Atomdichte, $\su{m_0}$ die Ruheenergie des Hüllenelektrons, Z die Kernladungszahl und I die mittlere Ionisationsenergie
 des Targetmaterials an.
@@ -30,9 +29,10 @@ einer Richtungsänderung um den Streuwinkel $\su{\Theta}$. Es wird nach der 1. B
 ausgegangen, dass die Mehrfachstreuung der $\su{\alpha}$-Teilchen vernachlässigt werden kann.
 \newline
 Dieser Streuwinkel lässt sich mit der Rutherford-Streuformel berechnen
-\begin{equation*}
+\begin{equation}
     \frac{d\sigma}{d\Omega}(\Uptheta) = \frac{1}{(4\pi \epsilon_0)^2} \Big(\frac{zZe^2}{4E_{\alpha}}\Big)^2 \frac{1}{\sin^4\frac{\Uptheta}{2}}.
-\end{equation*}
+\label{eqn:wqs}
+\end{equation}
 $\su{E_{\alpha}}$ beschreibt dabei die mittlere kinetische Enegie der $\su{\alpha}$-Teilchen .
 Der differentielle Wirkungsquerschnitt $\frac{d\sigma}{d\Omega}$ beschreibt gerade die Intensitätsverteilung
 der gestreuten $\su{\alpha}$-Teilchen in den Raumwinkel $\su{\Uptheta}$.
@@ -81,4 +81,3 @@ Zur Untersuchung der Mehrfachstreuung wird die Streuung der unterschiedliche Fol
 eingestellt.
 \newline
 Die Aktivität wird außerdem ohne Folie für 120\,s im Vakuum gemessen.
-\end{document}
