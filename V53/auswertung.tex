@@ -1,18 +1,44 @@
 \input{header.tex}
+\usepackage{amssymb}
 \begin{document}
 \section{Auswertung}
+\subsection{Untersuchung eines Reflexklytrons}
 \begin{table}
   \centering
-  \begin{tabular}{c c c c c}
+  \begin{tabular}{c c c c c c}
     \toprule
-    {$\su{U_1}$\,/\,V} & {$\su{U_2}$\,/\,V} & {$\su{U_3}$\,/\,V} & {$\su{A_0}$\,/\,Teilstriche} & {$\su{f_0}$\,/\,MHz} \\
+    {Mode} & {$\su{U_0}$\,/\,V} & {$\su{U_1}$\,/\,V} & {$\su{U_2}$\,/\,V} & {$\su{A_0}$\,/\,V} & {$\su{f_0}$\,/\,MHz} \\
     \midrule
+    1 & 60 & 50 & 70 & 0,9 & 9015 \\
+    2 & 100 & 90 & 110 & 1,3 & 9007 \\
+    3 & 150 & 140 & 170 & 2,5 & 9001 \\
 
     \bottomrule
-    \label{fig:}
+    \label{fig:reflex}
   \end{tabular}
-  \caption{}
+  \caption{Messwerte für die Reflektorspannungen mit der jeweiligen Amplitude und Frequenz}
 \end{table}
+Aus den Messwerten kann eine Regression der Form
+\begin{align*}
+    A(U) = xU^2 + yU+ z
+\end{align*}
+durchgeführt werden. Diese ist in Abbildung \ref{fig:regression} zu sehen.
+
+
+Die daraus resultierenden Parameter sind in Tabelle \ref{tab:params} aufgetragen.
+\begin{table}
+    \centering
+    \begin{tabular}{c c c}
+        \toprule
+        {x} & {y} & {z}\\
+        \midrule
+
+        \bottomrule
+        \label{fig:params}
+    \end{tabular}
+    \caption{}
+\end{table}
+
 
 \begin{table}
     \centering
@@ -20,77 +46,108 @@
         \toprule
         {$\su{U_0}$\,/\,V} & {$\su{f_0}$\,/\,MHz} \\
         \midrule
-
+         235 & 9001 \\
+         230 & 8985 \\
+         250 & 9021 \\
         \bottomrule
         \label{fig:}
     \end{tabular}
     \caption{}
 \end{table}
+Die Bandbreite $\Delta f$ berechnet sich nach
+\begin{align*}
+    \Delta f = f^{\shortmid} -f^{\shortmid\shortmid} = 15\,\mathrm{MHz}.
+\end{align*}
+\newline
+Für die Abstimmempfindlichkteit ergibt sich mithilfe der zuvor berechneten Bandbreite
+\begin{align*}
+    E = \frac{f^{\shortmid} - f^{\shortmid\shortmid}}{U^{\shortmid} - U^{\shortmid\shortmid}} = 0,42 \,\frac{\su{MHz}}{\su{V}}.
+\end{align*}
 
+\newpage
+\subsection{Messung von Frequenz, Wellenlänge und Dämpfung}
+Die Messwerte sind in Tabelle \ref{tab:frequenz} dargestellt.
+\begin{table}
+    \centering
+    \begin{tabular}{c c c c c}
+        \toprule
+        {$\su{f}$\,/\,MHz} & {1. Minimum\,/\,mm} & {2. Minimum\,/\,mm} & {$\su{\lambda_g}$\,/\,mm} & {a\,/\,mm}\\
+        \midrule
+        8952 & 72,6 & 97,5 & 43,7 & 21,85\\
+        \bottomrule
+        \label{fig:frequenz}
+    \end{tabular}
+    \caption{}
+\end{table}
+Der Abstand a ist dabei genau der Abstand zwischen den beiden Minima.
+Aus diesem wird die Hohlwellenlänge $\lambda_g$ berechnet, welche genau dem doppelte Abstand a entspricht.
+\newline
+Mit Formel \ref{eqn:1} ergibt sich die Frequenz $\su{f} = 9701,84$\,MHz.
+\newline
+In Tabelle \ref{tab:swr} sind die Messergebnisse für die Dämpfung zu sehen.
+Bei der Mikrometereinstellung sind die Werte auf 2,5\,mm normiert.
 \begin{table}
     \centering
     \begin{tabular}{c c c}
         \toprule
-        {$\su{U_0}$\,/\,V} & {1. Minimum\,/\,mm} & {2. Minimum\,/\,mm} \\
+        {SWR-Meter Ausschlag\,/\,dB} & {Mikrometereinstellung\,/\,mm} & {Dämpfung aus der Eichkurve\,/\,dB} \\
         \midrule
-
+         0 & 0,00 & 0,0 \\
+         2 & 0,50 & 1,0 \\
+         4 & 0,70 & 1,5 \\
+         6 & 1,00 & 2,0 \\
+         8 & 1,15 & 3,0 \\
+         10 & 1,25 & 4,5 \\
         \bottomrule
-        \label{fig:}
+        \label{tab:swr}
     \end{tabular}
     \caption{}
 \end{table}
-
-\begin{table}
-    \centering
-    \begin{tabular}{c c c}
-        \toprule
-        {SWR-Meter Ausschlag\,/\,dB} & {Mikrometereinstellung\,/\,mm} & {Dämpfung aus der Eichkurve\,/\,mm} \\
-        \midrule
-
-        \bottomrule
-        \label{fig:}
-    \end{tabular}
-    \caption{}
-\end{table}
-
+In Abbildung \ref{fig:dämpfung} ist die Dämpfungskurve dargestellt.
+\newpage
+\subsection{Stehwellenmessung}
 \begin{table}
     \centering
     \begin{tabular}{c c c}
         \toprule
         {Sondentiefe\,/\,V} & {SWR-Meter Ausschlag} \\
         \midrule
-
+         3 & 1,430 \\
+         5 & 1,625 \\
+         7 & 2,400 \\
+         9 & 4,000 \\
         \bottomrule
         \label{fig:}
     \end{tabular}
-    \caption{}
+    \caption{SWR-Meter-Methode}
 \end{table}
 
 \begin{table}
     \centering
-    \begin{tabular}{c c c}
+    \begin{tabular}{c c c c c c}
         \toprule
-        {$\su{U_0}$\,/\,V} & {1. Minimum\,/\,mm} & {2. Minimum\,/\,mm} \\
+        {$\su{d_1}$\,/\,mm} & {$\su{d_2}$\,/\,mm} & {1. Minimum\,/\,mm} & {2. Minimum\,/\,mm} & {$\su{\lambda_g}$} & {SWR}\\
         \midrule
-
+         77 & 54 & 69 & 72 & 27,2 & 4,88 \\
         \bottomrule
         \label{fig:}
     \end{tabular}
-    \caption{}
+    \caption{3\,dB-Methode}
 \end{table}
 
 \begin{table}
     \centering
     \begin{tabular}{c c c c}
         \toprule
-        {$\su{d_1}$\,/\,mm} & {$\su{d_2}$\,/\,mm} & {1. Minimum\,/\,mm} & {2. Minimum\,/\,mm} \\
+        {$\su{A_1}$\,/\,dB} & {$\su{A_2}$\,/\,dB} & {$\su{|A_2-A_1|}$\,/\,dB} & {SWR} \\
         \midrule
-
+        20 & 27,14 & 7,14 & 3,57 \\
         \bottomrule
-        \label{fig:}
+        \label{fig:abschwächer}
     \end{tabular}
-    \caption{}
+    \caption{Abschwächer-Methode}
 \end{table}
+
 
 
 
