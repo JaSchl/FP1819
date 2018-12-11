@@ -3,6 +3,8 @@
 \begin{document}
 \section{Auswertung}
 \subsection{Untersuchung eines Reflexklytrons}
+Die Messwerte der Untersuchung drei verschiedener Moden auf einem Oszilloskop sind
+in Tabelle \ref{tab:reflex} eingetragen.
 \begin{table}
   \centering
   \begin{tabular}{c c c c c c}
@@ -12,34 +14,41 @@
     1 & 60 & 50 & 70 & 0,9 & 9015 \\
     2 & 100 & 90 & 110 & 1,3 & 9007 \\
     3 & 150 & 140 & 170 & 2,5 & 9001 \\
-
     \bottomrule
-    \label{fig:reflex}
+    \label{tab:reflex}
   \end{tabular}
   \caption{Messwerte für die Reflektorspannungen mit der jeweiligen Amplitude und Frequenz}
 \end{table}
+\newline
 Aus den Messwerten kann eine Regression der Form
 \begin{align*}
     A(U) = xU^2 + yU+ z
 \end{align*}
 durchgeführt werden. Diese ist in Abbildung \ref{fig:regression} zu sehen.
-
-
+\begin{figure}
+  \centering
+  \includegraphics[width = 12 cm]{moden.pdf}
+  \caption{Graphen der drei Moden}
+  \label{fig:regression}
+\end{figure}
+\newpage
 Die daraus resultierenden Parameter sind in Tabelle \ref{tab:params} aufgetragen.
 \begin{table}
     \centering
     \begin{tabular}{c c c}
         \toprule
-        {x} & {y} & {z}\\
+        {x\,/\,$\frac{1}{V}$} & {y} & {z\,/\,V}\\
         \midrule
-
+        -0,009 & 1,080 & -31,500 \\
+        2,600 & -0,013 & -128,700 \\
+        3,875 & -0,125 & -297,450 \\
         \bottomrule
-        \label{fig:params}
+        \label{tab:params}
     \end{tabular}
-    \caption{}
+    \caption{Fitparameter der Reflektorspannungen}
 \end{table}
-
-
+\newline
+Für die elektronische Abstimmung des Reflexklytrons sind die Messwerte in Tabelle \ref{tab:elektronisch} zu sehen.
 \begin{table}
     \centering
     \begin{tabular}{c c}
@@ -50,10 +59,11 @@ Die daraus resultierenden Parameter sind in Tabelle \ref{tab:params} aufgetragen
          230 & 8985 \\
          250 & 9021 \\
         \bottomrule
-        \label{fig:}
+        \label{tab:elektronisch}
     \end{tabular}
-    \caption{}
+    \caption{Messwerte der elektronischen Abstimmung}
 \end{table}
+\newline
 Die Bandbreite $\Delta f$ berechnet sich nach
 \begin{align*}
     \Delta f = f^{\shortmid} -f^{\shortmid\shortmid} = 15\,\mathrm{MHz}.
@@ -75,10 +85,11 @@ Die Messwerte sind in Tabelle \ref{tab:frequenz} dargestellt.
         \midrule
         8952 & 72,6 & 97,5 & 43,7 & 21,85\\
         \bottomrule
-        \label{fig:frequenz}
+        \label{tab:frequenz}
     \end{tabular}
-    \caption{}
+    \caption{Messreihe zur Bestimmung der Frequenz}
 \end{table}
+\newline
 Der Abstand a ist dabei genau der Abstand zwischen den beiden Minima.
 Aus diesem wird die Hohlwellenlänge $\lambda_g$ berechnet, welche genau dem doppelte Abstand a entspricht.
 \newline
@@ -88,24 +99,36 @@ In Tabelle \ref{tab:swr} sind die Messergebnisse für die Dämpfung zu sehen.
 Bei der Mikrometereinstellung sind die Werte auf 2,5\,mm normiert.
 \begin{table}
     \centering
-    \begin{tabular}{c c c}
+    \begin{tabular}{c c c c}
         \toprule
-        {SWR-Meter Ausschlag\,/\,dB} & {Mikrometereinstellung\,/\,mm} & {Dämpfung aus der Eichkurve\,/\,dB} \\
+        {SWR-Meter Ausschlag\,/\,dB} & {Mikrometereinstellung\,/\,mm} & {Dämpfung\,/\,dB} & {Abweichung}\\
         \midrule
-         0 & 0,00 & 0,0 \\
-         2 & 0,50 & 1,0 \\
-         4 & 0,70 & 1,5 \\
-         6 & 1,00 & 2,0 \\
-         8 & 1,15 & 3,0 \\
-         10 & 1,25 & 4,5 \\
+         0 & 0,00 & 0,0 & 0\% \\
+         2 & 0,50 & 1,0 & 500\% \\
+         4 & 0,70 & 1,5 & 500\% \\
+         6 & 1,00 & 2,0 & 500\% \\
+         8 & 1,15 & 3,0 & 617\%\\
+         10 & 1,25 & 4,3 & 709\%\\
         \bottomrule
         \label{tab:swr}
     \end{tabular}
-    \caption{}
+    \caption{Messergebnisse der Dämpfung}
 \end{table}
+\newline
 In Abbildung \ref{fig:dämpfung} ist die Dämpfungskurve dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[width = 12 cm]{dämpfung.pdf}
+  \caption{Vergleich der experimentellen und theoretischen Werte der Dämpfungskurve}
+  \label{fig:dämpfung}
+\end{figure}
+
 \newpage
 \subsection{Stehwellenmessung}
+Zur Bestimmung der Stehwellenmessungen werden die drei möglichen Methoden durchgeführt.
+Die resultierenden Messergebnisse sind aus Tabelle \ref{tab:swr} für die SWR-Methode,
+in Tabelle \ref{tab:3dB} für die 3dB-Methode und in Tabelle \ref{tab:abschwächer} für die
+Abschwächer-Methode zu entnehmen.
 \begin{table}
     \centering
     \begin{tabular}{c c c}
@@ -117,11 +140,12 @@ In Abbildung \ref{fig:dämpfung} ist die Dämpfungskurve dargestellt.
          7 & 2,400 \\
          9 & 4,000 \\
         \bottomrule
-        \label{fig:}
+        \label{tab:swr}
     \end{tabular}
     \caption{SWR-Meter-Methode}
 \end{table}
-
+\newline
+Bei der 3dB-Methode lässt sich das SWR mithilfe von Formel \ref{eqn:2} berechnen.
 \begin{table}
     \centering
     \begin{tabular}{c c c c c c}
@@ -130,25 +154,72 @@ In Abbildung \ref{fig:dämpfung} ist die Dämpfungskurve dargestellt.
         \midrule
          77 & 54 & 69 & 72 & 27,2 & 4,88 \\
         \bottomrule
-        \label{fig:}
+        \label{tab:3dB}
     \end{tabular}
     \caption{3\,dB-Methode}
 \end{table}
-
 \begin{table}
     \centering
     \begin{tabular}{c c c c}
         \toprule
-        {$\su{A_1}$\,/\,dB} & {$\su{A_2}$\,/\,dB} & {$\su{|A_2-A_1|}$\,/\,dB} & {SWR} \\
+        {$\su{A_1}$\,/\,dB} & {$\su{A_2}$\,/\,dB} & {$\su{|A_2-A_1|}$\,/\,dB} & {SWR$=\su{\frac{\Delta A}{2}}$} \\
         \midrule
         20 & 27,14 & 7,14 & 3,57 \\
         \bottomrule
-        \label{fig:abschwächer}
+        \label{tab:abschwächer}
     \end{tabular}
     \caption{Abschwächer-Methode}
 \end{table}
 
+\section{Diskussion}
+Die Bestimmung der Messwerte mithilfe des SWR-Meters führte während der Durchführung
+zu einigen Ungenauigkeiten, da dieses auf kleinste Bewegungen im Raum reagierte.
 
+Der zu erwartenene Anstieg der Amplituden bei steigender Reflektorspannung ist in
+der Diagramm der 3 Moden gut zu erkennen. Jedoch stimmt bei der 3. Mode das Maximum der Parabel
+nicht mit dem gemessen Maximum überein. Der Grund dafür könnte sein, dass die Einsattelung
+nicht genau mit dem Oszilloskop erkennbar war.
 
+Die Ergebnisse für die experimentell und theoretisch bestimmte Frequenz
+ist in Tabelle \ref{tab:f-Vergleich} zu sehen.
+\begin{table}
+    \centering
+    \begin{tabular}{c c c}
+        \toprule
+        {$\su{f_0}\,/\,$MHz} & {$\su{f_{berechnet}}\,/\,$MHz} & {Abweichung} \\
+        \midrule
+        8952 & 9701,84 & 7,7\% \\
+        \bottomrule
+        \label{tab:f-Vergleich}
+    \end{tabular}
+    \caption{Vergleich der Frequenzen}
+\end{table}
+\newline
+Die prozentuale Abweichung liegt bei 7,7\%. Diese Abweichung lässt sich durch das schwierigere Auffinden
+zweier Minima erklären.
 
+Bei der Messung der Dämpfung liegt die prozentuale Abweichung in einem sehr hohen Bereich von 500-709\%.
+Diese ist auch in Abbildung \ref{fig:dämpfung} zu sehen. Die gemessenen Werte weichen sehr stark von
+den Theoriewerten ab. Hier ist schon während des Versuchs aufgefallen, dass die Messwerte so nicht stimmen können und sich ein systematischer
+Fehler eingeschlichen hat, der allerdings nicht behoben werden konnte. Deshalb ist die Messreihe eher zu
+vernachlässigen.
+
+Die Ergebnisse für die drei verschiedenen Methoden der Stehwellenmessung sind in Tabelle \ref{tab:SWR-Vergleich}
+dargestellt.
+\begin{table}
+    \centering
+    \begin{tabular}{c c c}
+        \toprule
+        {SWR-Meter-Methode} & {3\,dB-Methode} & {Abschwächer-Methode} \\
+        \midrule
+         4 & 4,8 & 3,57\\
+        \bottomrule
+        \label{tab:SWR-Vergleich}
+    \end{tabular}
+    \caption{Vergleich der unterschiedlichen Methoden}
+\end{table}
+\newline
+Es fällt auf, dass die Werte alle in derselben Größenordnung liegen, aber besonders der Wert der SWR-Meter-Methode
+deutlich von dem Wert der Abschwächer-Methode abweicht. Auch hier könnte die fehlerhaft verwendete
+Dämpfung zu der Ungenauigkeit beigetragen haben.
 \end{document}

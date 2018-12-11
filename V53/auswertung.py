@@ -9,12 +9,12 @@ x, y = np.genfromtxt('mode1.txt' , unpack=True)
 c, h = np.genfromtxt('mode2.txt' , unpack=True)
 j, s = np.genfromtxt('mode3.txt' , unpack=True)
 
-def f(x, m, n):
-    return m * x**2 + n
-def g(c, a, b):
-    return a*c**2 + b
-def i(j, d, e):
-    return d*j**2 + e
+def f(x, m, n, k):
+    return m * x**2 + n*x +k
+def g(c, a, b, o):
+    return a*c**2 + b*c + o
+def i(j, d, e, t):
+    return d*j**2 + e*j +t
 paramsI, covarianceI = curve_fit(f, x, y)
 errorsI = np.sqrt(np.diag(covarianceI))
 paramsII, covarianceII = curve_fit(g, c, h)
@@ -24,13 +24,16 @@ errorsIII = np.sqrt(np.diag(covarianceIII))
 
 n = ufloat(paramsI[1], errorsI[1])
 m = ufloat(paramsI[0], errorsI[0])
+k = ufloat(paramsI[2], errorsI[2])
 a = ufloat(paramsII[1], errorsII[1])
 b = ufloat(paramsII[0], errorsII[0])
+o = ufloat(paramsII[2], errorsII[2])
 d = ufloat(paramsIII[1], errorsIII[1])
 e = ufloat(paramsIII[0], errorsIII[0])
-print(m, n)
-print(a, b)
-print(d, e)
+t = ufloat(paramsIII[2], errorsIII[2])
+print(m, n, k)
+print(a, b, o)
+print(d, e, t)
 
 L1plot = np.linspace(50, 70)
 L2plot = np.linspace(90, 110)
@@ -52,13 +55,16 @@ plt.legend(loc="best")
 plt.savefig('moden.pdf')
 
 ##################################Dämpfung#############################
-#k, l = np.genfromtxt('dämpfung.txt')
-#
-#plt.plot(k, l, 'r+', label='SWR-Meter')
-#plt.ylabel(r"Dämpfung\,/\,dB")
-#plt.xlabel(r"Mikrometereinstellung\,/\,mm")
-#
-#plt.tight_layout
-#plt.legend(doc="best")
-#
-#plt.savefig('dämpfung.pdf')
+q, l = np.genfromtxt('dämpfungmess.txt' , unpack =True)
+r, w = np.genfromtxt('dämpfungtheo.txt' , unpack =True)
+
+plt.figure(2)
+plt.plot(q, l, 'r+', label='SWR-Meter')
+plt.plot(r, w, 'b+', label='Theoriewerte')
+plt.ylabel(r"Dämpfung$\,/\,$dB")
+plt.xlabel(r"Mikrometereinstellung$\,/\,$mm")
+
+plt.tight_layout
+plt.legend(loc="best")
+
+plt.savefig('dämpfung.pdf')
