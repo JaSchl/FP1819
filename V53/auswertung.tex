@@ -1,4 +1,3 @@
-
 \section{Auswertung}
 \subsection{Untersuchung eines Reflexklytrons}
 Die Messwerte der Untersuchung drei verschiedener Moden auf einem Oszilloskop sind
@@ -7,15 +6,15 @@ in Tabelle \ref{tab:reflex} eingetragen.
   \centering
   \begin{tabular}{c c c c c c}
     \toprule
-    {Mode} & {$\su{U_0}$\,/\,V} & {$\su{U_1}$\,/\,V} & {$\su{U_2}$\,/\,V} & {$\su{A_0}$\,/\,V} & {$\su{f_0}$\,/\,MHz} \\
+    {Mode} & {$U_0$\,/\,V} & {$U_1$\,/\,V} & {$U_2$\,/\,V} & {$A_0$\,/\,V} & {$f_0$\,/\,MHz} \\
     \midrule
     1 & 60 & 50 & 70 & 0,9 & 9015 \\
     2 & 100 & 90 & 110 & 1,3 & 9007 \\
     3 & 150 & 140 & 170 & 2,5 & 9001 \\
     \bottomrule
-    \label{tab:reflex}
   \end{tabular}
   \caption{Messwerte für die Reflektorspannungen mit der jeweiligen Amplitude und Frequenz}
+  \label{tab:reflex}
 \end{table}
 \newline
 Aus den Messwerten kann eine Regression der Form
@@ -35,15 +34,15 @@ Die daraus resultierenden Parameter sind in Tabelle \ref{tab:params} aufgetragen
     \centering
     \begin{tabular}{c c c}
         \toprule
-        {x\,/\,$\frac{1}{V}$} & {y} & {z\,/\,V}\\
+        {$x$\,/\,$\frac{1}{V}$} & {$y$} & {$z$\,/\,V}\\
         \midrule
         -0,009 & 1,080 & -31,500 \\
         2,600 & -0,013 & -128,700 \\
         3,875 & -0,125 & -297,450 \\
         \bottomrule
-        \label{tab:params}
     \end{tabular}
     \caption{Fitparameter der Reflektorspannungen}
+    \label{tab:params}
 \end{table}
 \newline
 Für die elektronische Abstimmung des Reflexklytrons sind die Messwerte in Tabelle \ref{tab:elektronisch} zu sehen.
@@ -51,25 +50,25 @@ Für die elektronische Abstimmung des Reflexklytrons sind die Messwerte in Tabel
     \centering
     \begin{tabular}{c c}
         \toprule
-        {$\su{U_0}$\,/\,V} & {$\su{f_0}$\,/\,MHz} \\
+        {$U_0$\,/\,V} & {$f_0$\,/\,MHz} \\
         \midrule
          235 & 9001 \\
          230 & 8985 \\
          250 & 9021 \\
         \bottomrule
-        \label{tab:elektronisch}
     \end{tabular}
     \caption{Messwerte der elektronischen Abstimmung}
+    \label{tab:elektronisch}
 \end{table}
 \newline
-Die Bandbreite $\Delta f$ berechnet sich nach
+Die Bandbreite $\symup\Delta f$ berechnet sich nach
 \begin{align*}
-    \Delta f = f^{\shortmid} -f^{\shortmid\shortmid} = 15\,\mathrm{MHz}.
+    \Delta f = f^{\shortmid} -f^{\shortmid\shortmid} = 20\mathrm{MHz}.
 \end{align*}
 \newline
 Für die Abstimmempfindlichkteit ergibt sich mithilfe der zuvor berechneten Bandbreite
 \begin{align*}
-    E = \frac{f^{\shortmid} - f^{\shortmid\shortmid}}{U^{\shortmid} - U^{\shortmid\shortmid}} = 0,42 \,\frac{\su{MHz}}{\su{V}}.
+    E = \frac{f^{\shortmid} - f^{\shortmid\shortmid}}{U^{\shortmid} - U^{\shortmid\shortmid}} = 1,33 \,\frac{\su{MHz}}{\su{V}}.
 \end{align*}
 
 \newpage
@@ -79,19 +78,19 @@ Die Messwerte sind in Tabelle \ref{tab:frequenz} dargestellt.
     \centering
     \begin{tabular}{c c c c c}
         \toprule
-        {$\su{f}$\,/\,MHz} & {1. Minimum\,/\,mm} & {2. Minimum\,/\,mm} & {$\su{\lambda_g}$\,/\,mm} & {a\,/\,mm}\\
+        {$f$\,/\,MHz} & {1. Minimum\,/\,mm} & {2. Minimum\,/\,mm} & {$\lambda_g$\,/\,mm} & {$a$\,/\,mm}\\
         \midrule
         8952 & 72,6 & 97,5 & 43,7 & 21,85\\
         \bottomrule
-        \label{tab:frequenz}
     \end{tabular}
     \caption{Messreihe zur Bestimmung der Frequenz}
+    \label{tab:frequenz}
 \end{table}
 \newline
-Der Abstand a ist dabei genau der Abstand zwischen den beiden Minima.
-Aus diesem wird die Hohlwellenlänge $\lambda_g$ berechnet, welche genau dem doppelte Abstand a entspricht.
+Der Abstand $a$ ist dabei genau der Abstand zwischen den beiden Minima.
+Aus diesem wird die Hohlwellenlänge $\lambda_g$ berechnet, welche genau dem doppelte Abstand $a$ entspricht.
 \newline
-Mit Formel \ref{eqn:1} ergibt sich die Frequenz $\su{f} = 9701,84$\,MHz.
+Mit Formel \ref{eqn:1} ergibt sich die Frequenz $f = 9701,84$\,MHz.
 \newline
 In Tabelle \ref{tab:swr} sind die Messergebnisse für die Dämpfung zu sehen.
 Bei der Mikrometereinstellung sind die Werte auf 2,5\,mm normiert.
@@ -102,15 +101,15 @@ Bei der Mikrometereinstellung sind die Werte auf 2,5\,mm normiert.
         {SWR-Meter Ausschlag\,/\,dB} & {Mikrometereinstellung\,/\,mm} & {Dämpfung\,/\,dB} & {Abweichung}\\
         \midrule
          0 & 0,00 & 0,0 & 0\% \\
-         2 & 0,50 & 1,0 & 500\% \\
-         4 & 0,70 & 1,5 & 500\% \\
-         6 & 1,00 & 2,0 & 500\% \\
-         8 & 1,15 & 3,0 & 617\%\\
-         10 & 1,25 & 4,3 & 709\%\\
+         2 & 0,50 & 1,0 & 200\% \\
+         4 & 0,70 & 1,5 & 267\% \\
+         6 & 1,00 & 2,0 & 300\% \\
+         8 & 1,15 & 3,0 & 267\%\\
+         10 & 1,25 & 4,3 & 233\%\\
         \bottomrule
-        \label{tab:swr}
     \end{tabular}
     \caption{Messergebnisse der Dämpfung}
+    \label{tab:swr}
 \end{table}
 \newline
 In Abbildung \ref{fig:dämpfung} ist die Dämpfungskurve dargestellt.
@@ -138,9 +137,9 @@ Abschwächer-Methode zu entnehmen.
          7 & 2,400 \\
          9 & 4,000 \\
         \bottomrule
-        \label{tab:swr}
     \end{tabular}
     \caption{SWR-Meter-Methode}
+    \label{tab:swr}
 \end{table}
 \newline
 Bei der 3dB-Methode lässt sich das SWR mithilfe von Formel \ref{eqn:2} berechnen.
@@ -148,25 +147,25 @@ Bei der 3dB-Methode lässt sich das SWR mithilfe von Formel \ref{eqn:2} berechne
     \centering
     \begin{tabular}{c c c c c c}
         \toprule
-        {$\su{d_1}$\,/\,mm} & {$\su{d_2}$\,/\,mm} & {1. Minimum\,/\,mm} & {2. Minimum\,/\,mm} & {$\su{\lambda_g}$} & {SWR}\\
+        {$d_1$\,/\,mm} & {$d_2$\,/\,mm} & {1. Minimum\,/\,mm} & {2. Minimum\,/\,mm} & {$\lambda_g$} & {SWR}\\
         \midrule
          77 & 54 & 69 & 72 & 27,2 & 4,88 \\
         \bottomrule
-        \label{tab:3dB}
     \end{tabular}
     \caption{3\,dB-Methode}
+    \label{tab:3dB}
 \end{table}
 \begin{table}
     \centering
     \begin{tabular}{c c c c}
         \toprule
-        {$\su{A_1}$\,/\,dB} & {$\su{A_2}$\,/\,dB} & {$\su{|A_2-A_1|}$\,/\,dB} & {SWR$=\su{\frac{\Delta A}{2}}$} \\
+        {$A_1$\,/\,dB} & {$A_2$\,/\,dB} & {$|A_2-A_1|$\,/\,dB} & {SWR$=\frac{\Delta A}{2}$} \\
         \midrule
         20 & 27,14 & 7,14 & 3,57 \\
         \bottomrule
-        \label{tab:abschwächer}
     \end{tabular}
     \caption{Abschwächer-Methode}
+    \label{tab:abschwächer}
 \end{table}
 
 \section{Diskussion}
@@ -184,19 +183,19 @@ ist in Tabelle \ref{tab:f-Vergleich} zu sehen.
     \centering
     \begin{tabular}{c c c}
         \toprule
-        {$\su{f_0}\,/\,$MHz} & {$\su{f_{berechnet}}\,/\,$MHz} & {Abweichung} \\
+        {$f_0\,/\,$MHz} & {$f_{\su{berechnet}}\,/\,$MHz} & {Abweichung} \\
         \midrule
         8952 & 9701,84 & 7,7\% \\
         \bottomrule
-        \label{tab:f-Vergleich}
     \end{tabular}
     \caption{Vergleich der Frequenzen}
+    \label{tab:f-Vergleich}
 \end{table}
 \newline
 Die prozentuale Abweichung liegt bei 7,7\%. Diese Abweichung lässt sich durch das schwierigere Auffinden
 zweier Minima erklären.
 
-Bei der Messung der Dämpfung liegt die prozentuale Abweichung in einem sehr hohen Bereich von 500-709\%.
+Bei der Messung der Dämpfung liegt die prozentuale Abweichung in einem hohen Bereich von 200-30\%.
 Diese ist auch in Abbildung \ref{fig:dämpfung} zu sehen. Die gemessenen Werte weichen sehr stark von
 den Theoriewerten ab. Hier ist schon während des Versuchs aufgefallen, dass die Messwerte so nicht stimmen können und sich ein systematischer
 Fehler eingeschlichen hat, der allerdings nicht behoben werden konnte. Deshalb ist die Messreihe eher zu
@@ -212,9 +211,9 @@ dargestellt.
         \midrule
          4 & 4,8 & 3,57\\
         \bottomrule
-        \label{tab:SWR-Vergleich}
     \end{tabular}
     \caption{Vergleich der unterschiedlichen Methoden}
+    \label{tab:SWR-Vergleich}
 \end{table}
 \newline
 Es fällt auf, dass die Werte alle in derselben Größenordnung liegen, aber besonders der Wert der SWR-Meter-Methode
