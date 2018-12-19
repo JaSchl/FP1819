@@ -8,21 +8,21 @@
 
   Mikrowellen decken den Frequenzbereich von ca. 300\,MHz bis 300\,GHz ab.
   Diese elektromagnetischen Wellen können mit einem Hohlleiter weitergeleitet werden.
-  Jeder Wellentyp (Mode) hat eine Grenzfrequenz unter der kein Energietransport durh den Hohlleiter mehr statt findet.
+  Jeder Wellentyp (Mode) hat eine Grenzfrequenz unter der kein Energietransport durh den Hohlleiter mehr stattfindet.
   Sie ist abhängig von den Maßen des Hohlleiters.
-  Es wird zwischen zwei Moden unterschieden.
-  Den transversal elektrischen und magnetischen Moden.
+  Es wird zwischen zwei Moden unterschieden:\\
+  Transversal elektrische und magnetische Moden.
   Diese Moden haben ein elektrisches bzw. magnetisches Feld, dass senkrecht zur Fortpflanzungsrichtung ist.
 
   Ein Klystron ist eine Mikrowellenröhre, in der durch Geschwindigkeitsmodulation Mikrowellenenergie gewonnen wird.
   An dem Reflektor liegt ein gegen die Kathode negatives Potential an, weshalb die emittierten Elektronen von ihm reflektiert werden.
-  Sie laufen durch das Resonatorgitter und das Klystron fängt an zu schwingen.
-  Die Elektronen verlassen den Resonator entweder beschleungigt oder abgebremmst, sodass sie einen Geschwindigkeitsuntershied haben.
-  Daraus folgt, dass sich die Rückkehrenden Elektronen zu einem Bündel vereinigen.
+  Sie laufen durch das Resonatorgitter und mit Hilfe des Klystrons wird das System zum schwingen gebracht.
+  Die Elektronen verlassen den Resonator entweder beschleunigt oder abgebremst, sodass sie einen Geschwindigkeitsunterschied haben.
+  Daraus folgt, dass sich die rückkehrenden Elektronen zu einem Bündel vereinigen.
   Dieser Bündel tritt in Wechselwirkung mit dem Feld und gibt so Energie an den Resonator ab.
-  Bei n+ $\sfrac{3}{4}$ Perioden tritt dabei die größte Schwingung auf.
+  Bei n+ $\sfrac{3}{4}$ Perioden Gangunterschied tritt dabei die stärkste Verstärkung auf.
 
-  Der Zusammenhang zwischen Frequenz und Wellenlängekann im freien Raum beschrieben werden durch
+  Der Zusammenhang zwischen Frequenz und Wellenlänge kann im freien Raum beschrieben werden durch
   \begin{equation*}
     c = f \cdot\lambda_0.
   \end{equation*}
@@ -31,28 +31,28 @@
     \lambda_g = \frac{\lambda_0}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_e}\right)^2}}.
   \end{equation}
   $\lambda_e$ beschreibt dabei die Grenzwellenlänge im Hohlleiter.
-  Sie entspricht zwei mal der Breitseite des Hohlleiters.
+  Sie entspricht zwei mal der Breitseite des Hohlleiters,
   für die Frequenz ergibt sich somit
   \begin{equation}
-    f = c\cdot \sqrt{\left(\frac{1}{\lambda_g}\right)^2+\left(\frac{1}{2a}\right)^2}
+    f = c\cdot \sqrt{\left(\frac{1}{\lambda_g}\right)^2+\left(\frac{1}{2a}\right)^2}.
     \label{eqn:1}
   \end{equation}
 
-  An jedem Punkt der Hohlleitung kann die Welle als eine vom Generator reflektierte und einer emittierten Welle aufgefasst werden.
-  Die reflektierte Welle entsteht durch unebenheiten im Hohleiter ader an einer Lastimpedanz.
-  Haben beide Wellen die gleiche Phasenlage wird die Feldstärke maximal.
+  An jedem Punkt der Hohlleitung kann die Welle als eine vom Generator emittierten und einer reflektierten Welle aufgefasst werden.
+  Die reflektierte Welle entsteht durch Unebenheiten im Hohleiter oder an einer Lastimpedanz.
+  Haben beide Wellen die gleiche Phasenlage, wird die Feldstärke maximal.
   Das Verhältnis zwischen den elektrischen Feldstärken der emittierten und reflektierten Welle wird als Spannungs-Reflexionskoeffizient $\rho$ beschrieben.
   Das "Spannungs-Stehwellen-Verhältnis"(SWR) wird durch den Quotienten aus maximaler und minimaler Feldstärke berechnet.\\
   Es gibt mehrere Messverfahren zur Bestimmung von Welligkeiten.
   Zum einen die direkte Messung, die bei hohem SWR ungenau wird, und zum anderen die "3-dB-Methode".
   Das SWR wird berechnet mit
   \begin{align}
-    S &= \sqrt{1 + \frac{1}{sin^2\left(\frac{\pi (d1-d2)}{\lambda_g}\right)}}\\
-      &= \frac{\lambda_g}{\pi (d1-d2)}.
+    S &= \sqrt{1 + \frac{1}{\sin^2\left(\frac{\pi (d_1-d_2)}{\lambda_g}\right)}}\\
+      &\approx \frac{\lambda_g}{\pi (d_1-d_2)}.
     \label{eqn:2}
   \end{align}
-  Der zweite Teil ist eine Nährung, die angewand werden kann, wenn S größer als 10 ist.
-  Bei der "3-dB-Methode" kommt es zu Abweichungen des Detektors vom quadratischen Verhalten.
+  Der zweite Teil ist eine Nährung, die angewandt werden kann, wenn S größer als 10 ist.
+  Bei der "3-dB-Methode" kommt es zu Abweichungen des Detektors vom quadratischen Verhalten der Diode.
   Dieses wird mit der "Abschwächer-Methode" überwunden.
   Das Ausgangssignal im Maximum wird dem im Minimum gleichgesetzt.
 
@@ -69,10 +69,10 @@
     \end{figure}
     Das Dämpfungsglied wird auf 30\,dB gestellt.
     Die Amplitude der Sinusspannung wird so eingestellt, dass sich eine horizontale Linie parallel zur Mittellinie ergibt.
-    Die Reflektorspannung wird auf etwa 200\,V eingestellt und so lange variiert bis die Modenkurven im Mittelpunkt liegen.
-    Der Frequenzmesser wird so abgestimmt, dass eine Sattelung an der Spitze der Kurve erscheint, wie in Abbildung \ref{fig:Mode}.
+    Die Reflektorspannung wird auf etwa 200\,V eingestellt und so lange variiert, bis die Modenkurven im Mittelpunkt liegen.
+    Der Frequenzmesser wird so abgestimmt, dass eine Sattelung an der Spitze der Kurve erscheint, wie in Abbildung \ref{fig:Mode} zu sehen.
     Die Frequenz und die Spannung wird aufgenommen und die Kurve nach rechts bzw links verschoben,
-    wie in Abbildung \ref{fig:Mode} zu sehen, und die Spannungen werden wieder aufgenommen.
+    wie in Abbildung \ref{fig:Mode} zu sehen, und diejenigen Spannungen werden wieder aufgenommen.
     Außerdem wird die Amplitude bestimmt.
     \begin{figure}
       \centering
@@ -101,11 +101,11 @@
     \end{figure}
     Das Dämpfungsglied wird auf 20\,dB gestellt und die Reflektorspannung auf ca. 200\,V.
     Am SWR-Meter werden 40\,dB und eine Bandbreite von 100\,Hz eingestellt.
-    Mit dem 1\,kHz knopf wird ein maximaler Ausschlag erzeugt.
+    Mit dem 1\,kHz Regler wird ein maximaler Ausschlag erzeugt.
     Danach wird der Frequenzmesser so verändert, dass es zu einem minimalen Ausschlag kommt.\\
-    Nun wird der Abschluss durch den verstellbaren Kurzschluss erzetzt und der Frequenzmessser verstimmt.
+    Nun wird der Abschluss durch den verstellbaren Kurzschluss ersetzt und der Frequenzmessser verstimmt.
     Mit der Sonde werden nun die Punkte des minimalen Ausschlags gesucht.\\
-    Der Kurzschluss wird wieder durch den Abschluss ersetzt und die Frequenz auf 9000\,MHz gestellt.
+    Der Kurzschluss wird wieder durch den Abschluss ersetzt und der Frequenzmesser auf 9000\,MHz gestellt.
     Die Verstärkung des SWR-Meters wird auf den maximalen Ausschlag gedreht.
     Das Dämpfungsglied wird zunächst so gestellt, dass keine Dämpfung vorliegt.
     Dann wird die Dämpfung immer weiter verstärkt um das Verhältnis zwischen mm und dB zu erhalten.
@@ -119,10 +119,10 @@
       \caption{Aufbau zur Stehwellen-Messung}
       \label{fig:aufbauV3}
     \end{figure}
-    Der abschwächer wird fest auf 20\,dB eingestellt und am SWR-Meter werden 40\,dB und eine Bandbreite von 20\,Hz eingestellt.
-    Das Klystron wird bei 9\,GHz zum schwingen gebracht.
+    Der Abschwächer wird fest auf 20\,dB eingestellt und am SWR-Meter werden 40\,dB und eine Bandbreite von 20\,Hz eingestellt.
+    Das System wird bei 9\,GHz mit Hilfe des Klystrons zum Schwingen gebracht.
     Nun werden die kleinen und mittleren Welligkeiten gemessen.
-    Dafür wird zunächst die Sondentiefe des Gleitschraubentransformators auf 3, 5, 7 und 9\,mm gestellt und ein Maximum, sowie ein Minimum gesucht.
+    Dafür wird zunächst die Sondentiefe des Gleitschraubentransformators auf 3, 5, 7 und 9\,mm gestellt und ein Maximum sowie ein Minimum gesucht.
 
     Mit der "3 dB-Methode" werden nun die großen Welligkeiten gemessen.
     Die Sonde wird auf 9\,mm gestellt und es wird wieder ein Minimum gesucht.
