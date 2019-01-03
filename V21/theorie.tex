@@ -14,8 +14,8 @@ zur temperaturabhängigen Besetzung. Diese wird durch die Boltzmannsche Gleichun
 mit den Zuständen $N_1$, $N_2$ und den Energien $W_1$, $W_2$
 beschreiben. Die statistischen Gewichte $g_{\text{i}}$ geben hierbei die Anzahl der zu der Energie
 $W_{\text{i}}$ gehörigen Zustände an.
-Durch das optische Pumpen ist es möglich die in \ref{eqn:boltzmann} gegebene Verteilung
-zu verändern und das bis hin zu einer Inversion der Besetzungszustände mit $N_2 > N_1$.
+Durch das optische Pumpen ist es möglich, die in \ref{eqn:boltzmann} gegebene Verteilung
+zu verändern und schließlich sogar Inversion der Besetzungszustände mit $N_2 > N_1$ zu erzeugen.
 Diese Inversion kann dann zur Induzierung von Strahlungsübergängen verwendet werden.
 Die Energiedifferenz
 \begin{align*}
@@ -32,7 +32,7 @@ magnetisches Moment $\vec{\mu_{\su{J}}}$, was durch
     \vec{\mu_{\su{j}}} &= -g_{\su{j}} \mu_{\su{B}} \vec{J} \\
     |\vec{\mu_{\su{j}}}| &= g_{\su{j}} \mu_{\su{B}} \sqrt{J(J+1)}
 \end{align*}
-beschrieben wird. Dabei ist $\mu_{\su{B}}$ das Bohrsche Magneton, $g_{\su{J}}$ der Landé-Faktor, welcher
+beschrieben wird. Dabei ist $\mu_{\su{B}}$ das Bohrsche Magneton, $g_{\su{j}}$ der Landé-Faktor, welcher
 die Zusammensetzung des magnetischen Moments aus Bahndrehimpuls $\vec{L}$ und Spin $\vec{S}$ berücksichtigt.
 Es folgt für das Gesamtmoment
 \begin{align*}
@@ -52,7 +52,7 @@ des Atoms
 \begin{align*}
     \vec{F} = \vec{J} + \vec{I}.
 \end{align*}
-Die Quantenzahl $F$ kann die Werte von $I+J$ bis $|I-J|$ annehmen und folglich die Hyperfeinstrukturterme für den ersten Fall mit $J<I$: $2J+1$, und für den zweiten Fall mit
+Die Quantenzahl $F$ kann die Werte von $I+J$ bis $|I-J|$ annehmen und spaltet folglich in die Hyperfeinstrukturterme für den ersten Fall mit $J<I$: $2J+1$, und für den zweiten Fall mit
 $J>I$: $2I+1$.
 Durch das Anlegen eines äußeren Magnetfeldes kommt es zur weiteren Aufspaltung der Hyperfeinstrukturterme
 in $2F+1$-Zeeman-Niveaus. Die Energiedifferenz zweier benachbarter Niveaus wird bestimmt durch
@@ -72,22 +72,22 @@ dargestellt.
     \label{fig:alkali}
 \end{figure}
 
+\newpage
 \subsection{Optisches Pumpen}
 Der Übergang in ein anderes Niveau kann nur unter Berücksichtigung der Auswahlregeln
 $\Delta M_{\su{J}} = 0, \pm1$ erfolgen. Diese Übergänge unterschieden sich in ihrer Energie
 und Polarisation.
-Der $\sigma^{+}$-Übergang mit $\Delta M_{\text{J}} = 1$ kann nur mit rechszirkular-polarisierten Licht hervorgerufen werden,
-wohingegen der $\sigma^{-}$-Übergang mit $\Delta M_{\text{J}} = -1$
-Diese beiden Übergänge emittieren zirkular-polarisiertes Licht in Magnetfeldrichtung, in den dazu senkrecht
-Richtung.
+Der $\sigma^{+}$-Übergang mit $\Delta M_{\text{J}} = +1$ kann nur mit rechszirkular-polarisierten Licht hervorgerufen werden,
+wohingegen der $\sigma^{-}$-Übergang mit $\Delta M_{\text{J}} = -1$ mit linkszirkular-polarisierten.
+Diese beiden Übergänge emittieren zirkular-polarisiertes Licht in Magnetfeldrichtung.
 Der $\pi$-Übergang mit $\Delta M_{\text{J}} = 0$ emittiert parallel zum Magnetfeld linear polarisiertes
 Licht. \newline
 Die Zeeman-Aufspaltun mit den unterschiedlichen Übergängen und unter Vernachlässigung des Kernspins ist in Abbildung \ref{fig:übergänge}
 für eine hypothetisches Alkali-Atom dargestellt.
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.38]{pictures/übergänge.png}
-    \caption{.\cite{1}}
+    \includegraphics[scale = 0.35]{pictures/übergänge.png}
+    \caption{Zeeman-Aufspaltung des Alkali-Atoms unter Vernachlässigung des Kernspins.\cite{1}}
     \label{fig:übergänge}
 \end{figure}
 
@@ -97,19 +97,65 @@ in einen angeregten Zustand übergehen.
 Die möglichen Übergänge für diese Alkali-Atome sind in Abbildung \ref{fig:übergängerechts} zu sehen.
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.65]{pictures/übergängerechts.png}
+    \includegraphics[scale = 0.4]{pictures/übergängerechts.png}
     \caption{Übergangsmöglichkeiten für dieses Beispiel.\cite{1}}
     \label{fig:übergängerechts}
 \end{figure}
+\newline
+Durch das eingestrahlte rechtszirkular-polarisierte Licht werden jediglich $\Delta M_{\su{J}} = +1$-Übergänge angeregt, weshalb
+nur der Übergang von $^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=-\su{\frac{1}{2}}$ zu $^{2}P_{\su{\frac{1}{2}}}$ $M_{\su{J}}=+\su{\frac{1}{2}}$
+möglich ist. Die spontane Emission, bei der ein Photon aus einem angeregten Atom emittiert wird, führt zum Übergang
+zurück in den Grundzustand. Der Grundzustand besteht dabei aus den Niveaus $^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=+\su{\frac{1}{2}}$ und
+$^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=-\su{\frac{1}{2}}$. Da allerdings der $\sigma^{+}$-Übergang bei $^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=+\su{\frac{1}{2}}$
+nicht in die P-Niveaus möglich ist, reichern sich in dem anderen Zustand die Elektronen an, währenddessen der energetisch niedrigerere Zustand zunehmend weniger besetzt und
+irgendwann sogar leer gepumpt wird.
 
-Die Transparenz der Dampfzelle nimmt zu und läuft asymptotisch gegen 1, wie aus Abbildung \ref{fig:asymptotisch}
+Die Inversion der Besetzung kann mittels einer Intensitätsmessung nach Durchtritt des Lichts durch die Dampfzelle
+mithilfe eines Detektors nachgewiesen werden. Durch die Entleerung des $M_{\su{J}}= -\frac{1}{2}$-Zustandes
+wird das einfallende Licht immer weniger absorbiert.
+Die Transparenz der Dampfzelle nimmt dadurch zu und läuft asymptotisch gegen den Wert 1, wenn es möglich ist diesen Zustand
+leer zu pumpen. Dies ist in Abbildung \ref{fig:asymptotisch} dargestellt.
 \begin{figure}
     \centering
     \includegraphics[scale = 0.6]{pictures/asymptotisch.png}
-    \caption{Entwicklung der Transparenz unter Einstrahlung des rechtszirkular-polarisierten Liches.\cite{1}}
+    \caption{Entwicklung der Transparenz unter Einstrahlung des rechtszirkular-polarisierten Lichts.\cite{1}}
     \label{fig:asymptotisch}
 \end{figure}
 
+\noindent Neben der zuvor erwähnten spontanen Emission gibt es noch die induzierte Emission von Lichtquanten bei der
+die Emission nur durch ein eingestrahltes Photon stattfindet, welches genau die Energie
+des Überganges haben muss. Die beiden Photonen stimmen dann in Energie, Ausbreitungsrichtung und Polarisation überein.
+Diese beiden Emissionsformen können parallel geschehen. Im Energiebereich der Zeeman-Aufspaltung
+kann die spontane Emission allerdings vernachlässigt werden und es findet hauptsächlich induzierte
+Emission statt. In Abbildung \ref{fig:emission} sind die unterschiedlichen Emissionsformen skizziert.
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.5]{pictures/emission.png}
+    \caption{Übergangsmöglichkeiter einer Elektrons zwischen zwei Energieniveaus.\cite{1}}
+    \label{fig:emission}
+\end{figure}
+
+\noindent Durch ein frequenzvariables Hochfrequenzfeld kann die induzierte Emission hervorgerufen werden.
+Über den Zusammenhang
+\begin{align*}
+    h\nu = g_{\su{J}} \mu_{\su{B}} B_{\su{m}} \Delta M_{\su{J}}
+\end{align*}
+kann der Wert für das Magnetfeld
+\begin{align*}
+    B_{\su{m}} = \frac{4\pi m_{\su{0}}} {e_{\su{0}} g_{\su{J}}} \nu
+\end{align*}
+bestimmt werden ab dem die induzierte Emission einsetzt. Dies hat zur Folge, dass das
+$^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=+\su{\frac{1}{2}}$ leergepumpt wird, das
+$^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=-\su{\frac{1}{2}}$ ausgefüllt wird und somit
+das in die Dampfzelle eingestrahlte Licht wieder absorbiert werden kann.
+Im Resonanzfall nimmt die Transparenz der Dampfzelle ab, wie in Abbildung \ref{fig:resonanz}
+dargestellt ist.
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.6]{pictures/resonanz.png}
+    \caption{Transparenz der Dampfzelle für rechtszirkular-polarisiertes Licht.\cite{1}}
+    \label{fig:resonanz}
+\end{figure}
 
 \newpage
 \subsection{Quadratischer Zeeman-Effekt}
@@ -123,8 +169,9 @@ der magnetischen Momente beinhaltet, folgt für die Übergangsenergie
 \begin{align*}
      U_{\su{HF}} = g_{\su{F}} \mu{_\su{B}} \su{B} + g_{\su{F}}^2 \mu{_\su{B}}^2 \su{B}^2 \frac{(1-2M_{\su{F}})}{\symup\Delta E_{\su{HF}}} -\,...,
 \end{align*}
-mit der Energiedifferenz $\Delta E_{\symup{HF}}$ zwischen den Niveaus $F$ und $F+1$.
-Somit ist die Zeeman-Energie abhänig von $M_{\symup{F}}$. Dies wird als quadratischer Zeeman-Effekt bezeichnet.
+mit der Energiedifferenz $\Delta E_{\symup{HF}}$ zwischen den Niveaus $F$ und $F+1$. Die Übergangsenergie ist in dem
+zusätzlichen Term proportional zu $B^2$. Die Zeeman-Energie ist abhänig von der Quantenzahl $M_{\symup{F}}$.\\
+Dies wird als quadratischer Zeeman-Effekt bezeichnet.
 
 \subsection{Transiente Effekte}
 Bei der Betrachtung von gepumpten Systemen bei denen die Hochfrequenz innerhalb kürzester Zeit ein- und wieder ausgeschaltet wird,
