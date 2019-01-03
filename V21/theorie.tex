@@ -1,9 +1,10 @@
 \input{header.tex}
 \begin{document}
 \section{Zielsetzung}
-In diesem Versuch sollen für die Rubidium-Isotope $^{85}\su{Rb}$ und $^{87}\su{Rb}$ die Landé-Faktoren und
+In diesem Versuch sollen für die Rubidium-Isotope $^{85}\su{Rb}$ und $^{87}\su{Rb}$ die Landé-Faktoren und die
 daraus folgenden Spins der Elektronenhülle und des Kernspins mittels des optischen Pumpens bestimmt werden.
 \section{Theorie}
+Die Elektronenhüllen eines isolierten Atoms besitzen diskrete Energieniveaus. Die innersten Schalen sind nach dem Paulischen Ausschließungsprinzip
 vollständig mit Elektronen besetzt. Bei äußeren Energieniveaus hingegen kommt es
 zur temperaturabhängigen Besetzung. Diese wird durch die Boltzmannsche Gleichung
 \begin{align}
@@ -11,11 +12,11 @@ zur temperaturabhängigen Besetzung. Diese wird durch die Boltzmannsche Gleichun
     \label{eqn:boltzmann}
 \end{align}
 mit den Zuständen $N_1$, $N_2$ und den Energien $W_1$, $W_2$
-beschreiben. Die statistischen Gewichte $g_i$ geben die Anzahl der zu der Energie
-$W_i$ gehörigen Zustände an.
+beschreiben. Die statistischen Gewichte $g_{\text{i}}$ geben hierbei die Anzahl der zu der Energie
+$W_{\text{i}}$ gehörigen Zustände an.
 Durch das optische Pumpen ist es möglich die in \ref{eqn:boltzmann} gegebene Verteilung
-zu verändern bis zu einer Inversion der Besetzungszustände mit $N_2 > N_1$.
-Diese Inversion können dann zur Induzierung von Strahlungsübergängen verwendet werden.
+zu verändern und das bis hin zu einer Inversion der Besetzungszustände mit $N_2 > N_1$.
+Diese Inversion kann dann zur Induzierung von Strahlungsübergängen verwendet werden.
 Die Energiedifferenz
 \begin{align*}
     h\nu = W_{2}-W_{1}
@@ -51,10 +52,10 @@ des Atoms
 \begin{align*}
     \vec{F} = \vec{J} + \vec{I}.
 \end{align*}
-Die Quantenzahl F kann die Werte von $I+J$ bis $|I-J|$ annehmen und folglich die Hyperfeinstrukturterme für den ersten Fall mit $J<I$: $2J+1$, und für den zweiten Fall mit
+Die Quantenzahl $F$ kann die Werte von $I+J$ bis $|I-J|$ annehmen und folglich die Hyperfeinstrukturterme für den ersten Fall mit $J<I$: $2J+1$, und für den zweiten Fall mit
 $J>I$: $2I+1$.
 Durch das Anlegen eines äußeren Magnetfeldes kommt es zur weiteren Aufspaltung der Hyperfeinstrukturterme
-in $2F+1$-Zeeman-Niveaus. Die Energiedifferenz zweier benachbarter Niveaus folgt aus
+in $2F+1$-Zeeman-Niveaus. Die Energiedifferenz zweier benachbarter Niveaus wird bestimmt durch
 \begin{align*}
     U_{\symup{HF}} = g_{\symup{F}} \mu_{\symup{B}} B.
 \end{align*}
@@ -71,7 +72,7 @@ dargestellt.
     \label{fig:alkali}
 \end{figure}
 
-\subsection{Optische Pumpen}
+\subsection{Optisches Pumpen}
 Der Übergang in ein anderes Niveau kann nur unter Berücksichtigung der Auswahlregeln
 $\Delta M_{\su{J}} = 0, \pm1$ erfolgen. Diese Übergänge unterschieden sich in ihrer Energie
 und Polarisation.
@@ -123,7 +124,7 @@ der magnetischen Momente beinhaltet, folgt für die Übergangsenergie
      U_{\su{HF}} = g_{\su{F}} \mu{_\su{B}} \su{B} + g_{\su{F}}^2 \mu{_\su{B}}^2 \su{B}^2 \frac{(1-2M_{\su{F}})}{\symup\Delta E_{\su{HF}}} -\,...,
 \end{align*}
 mit der Energiedifferenz $\Delta E_{\symup{HF}}$ zwischen den Niveaus $F$ und $F+1$.
-Somit ist die Zeeman-Energie abhänig von $M_{\symup{F}}$, was als quadratischer Zeeman-Effekt bezeichnet wird.
+Somit ist die Zeeman-Energie abhänig von $M_{\symup{F}}$. Dies wird als quadratischer Zeeman-Effekt bezeichnet.
 
 \subsection{Transiente Effekte}
 Bei der Betrachtung von gepumpten Systemen bei denen die Hochfrequenz innerhalb kürzester Zeit ein- und wieder ausgeschaltet wird,
@@ -158,7 +159,7 @@ aus dem zuvor austretenden Licht zirkular-polarisiertes Licht erzeugt wird. Dies
 sich die beiden Rubidium-Isotope befinden. Durch das Beheizen der Dampfzelle wird ein optimaler Rubidium-Dampfdruck
 eingestellt. Um das durchgetretene Licht auf ein Si-Photoelement zu fokussieren, wird
 eine weitere Sammellinse verwendet. An das Photoelement angeschlossen sind ein Linearverstärker
-und ein Oszilloskop, mit dem sich Intensitätsänderungen des Lichtes darstellen lassen.
+und ein Oszilloskop mit dem sich Intensitätsänderungen des Lichtes darstellen lassen.
 
 \noindent Um die Dampfzelle herum sind drei Helmholtz-Spulenpaare aufgestellt. Dabei gleicht die eine das wirkende
 Erdmagnetfeld aus, wobei die anderen beiden für die Erzeugung der Zeeman-Aufspaltung der
@@ -166,4 +167,27 @@ Energieniveaus benötigt werden. Für die Erzeugung der horizontalen Feldern ist
 gewickelt. \newline
 Das durch eine weitere Spule entstandendene RF-Feld dient dazu, dass die Energieübergange abhängig von
 der Horizontalfeldstärke sind.
+
+\section{Durchführung}
+Durch schrittweises Einstellen und Platzieren der beiden Sammellinsen wird die auf den Lichtdetektor
+treffende Intensität versucht zu maximieren. Nach dem Einsetzen zusätzlicher optischer Elemente wird
+der Versuchausaufbau durch eine Decke abgedunkelt.
+
+Die Kompensation des Erdmagnetfelds mithilfe der Vertikal-Spule und der Drehung der Versuchsapparatur in der
+horizontalen Ebene führt dazu, dass der auf dem Oszilloskop zu sehende Peak der Sweep-Spule und des Potentiometers
+schmaler wird.
+
+Für die Bestimmung der Resonanzstelle wird die Frequenz der RF-Spule in einem Bereich von 100\,kHz bis
+1\,MHz schrittweise um 100\,kHz erhöht. Eine Sinusspannung wird zusätzlich angelegt.
+Damit die Resonanzstellen der unterschiedlichen Frequenzen auf dem Oszilloskop zu sehen sind, wird
+das Feld der Horizontalspule dementsprechend erhöht.
+Ab einer Frequenz von ungefähr 200\,kHz muss ein weiteres horizontales Feld angelegt werden. Dies führt dazu,
+dass der Bereich des Sweep-Feldes auf die einzelnen Resonanzen verschoben werden kann.
+
+Nachdem die Ausgangsfrequenz von 100\,kHz und das Magnetfeld wieder auf die erste Resonanzstelle eingestellt ist,
+wird eine Rechteckspannung von $0-5$\,V und mit einer Frequenz von 5\,Hz eingespeist. Dieses Signal
+wird zusammen mit dem Signal des Si-Photoelements über den YT-Modus sichtbar gemacht.
+Anhand der Aufnahmen des Oszilloskops kann über die Flanken der RF-Modulation
+die Periode in Abhänigkeit der Amplitude bestimmt werden. Dafür wird die Amplitude im Bereich von $0,5$\,V bis 10\,V
+in 1\,V Schritten verändert.
 \end{document}
