@@ -1,6 +1,6 @@
 \section{Zielsetzung}
-In diesem Versuch sollen für die Rubidium-Isotope $^{85}\su{Rb}$ und $^{87}\su{Rb}$ die Landé-Faktoren und die
-daraus folgenden Spins der Elektronenhülle und des Kernspins mittels des optischen Pumpens bestimmt werden.
+In diesem Versuch sollen für die beiden Rubidium-Isotope $^{85}\su{Rb}$ und $^{87}\su{Rb}$ die Energieaniveauaufspaltungen
+in der Hyperfeinstruktur- und Zeeman-Aufspaltung mittels des optischen Pumpens gemessen werden.
 \section{Theorie}
 Die Elektronenhüllen eines isolierten Atoms besitzen diskrete Energieniveaus. Die innersten Schalen sind nach dem Paulischen Ausschließungsprinzip
 vollständig mit Elektronen besetzt. Bei äußeren Energieniveaus hingegen kommt es
@@ -76,7 +76,7 @@ Der Übergang in ein anderes Niveau kann nur unter Berücksichtigung der Auswahl
 $\Delta M_{\su{J}} = 0, \pm1$ erfolgen. Diese Übergänge unterschieden sich in ihrer Energie
 und Polarisation.
 Der $\sigma^{+}$-Übergang mit $\Delta M_{\text{J}} = +1$ kann nur mit rechszirkular-polarisierten Licht hervorgerufen werden,
-wohingegen der $\sigma^{-}$-Übergang mit $\Delta M_{\text{J}} = -1$ mit linkszirkular-polarisierten.
+wohingegen der $\sigma^{-}$-Übergang mit $\Delta M_{\text{J}} = -1$ mit linkszirkular-polarisierten möglich ist.
 Diese beiden Übergänge emittieren zirkular-polarisiertes Licht in Magnetfeldrichtung.
 Der $\pi$-Übergang mit $\Delta M_{\text{J}} = 0$ emittiert parallel zum Magnetfeld linear polarisiertes
 Licht. \newline
@@ -90,7 +90,7 @@ für eine hypothetisches Alkali-Atom dargestellt.
 \end{figure}
 
 Durch das Einstrahlen von rechtszirkular-polarisierten $D_{\su{1}}$-Licht und das Anlegen eines Magnetfeldes
-kann ein aus hypothetisches Alkali-Atomen, welche sich alles im thermischen Gleichgewicht befinden, bestehender Dampf
+kann ein aus hypothetisches Alkali-Atomen, welche sich alle im thermischen Gleichgewicht befinden, bestehender Dampf
 in einen angeregten Zustand übergehen.
 Die möglichen Übergänge für diese Alkali-Atome sind in Abbildung \ref{fig:übergängerechts} zu sehen.
 \begin{figure}
@@ -102,8 +102,10 @@ Die möglichen Übergänge für diese Alkali-Atome sind in Abbildung \ref{fig:ü
 \newline
 Durch das eingestrahlte rechtszirkular-polarisierte Licht werden jediglich $\Delta M_{\su{J}} = +1$-Übergänge angeregt, weshalb
 nur der Übergang von $^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=-\su{\frac{1}{2}}$ zu $^{2}P_{\su{\frac{1}{2}}}$ $M_{\su{J}}=+\su{\frac{1}{2}}$
-möglich ist. Die spontane Emission, bei der ein Photon aus einem angeregten Atom emittiert wird, führt zum Übergang
-zurück in den Grundzustand. Der Grundzustand besteht dabei aus den Niveaus $^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=+\su{\frac{1}{2}}$ und
+möglich ist. Aufgrund der Auswahlregeln ist der Übergang von $^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=+\su{\frac{1}{2}}$ aus nicht möglich, da
+$M_{\su{F}}$ nur die Werte von $|2|$ annehmen kann, nicht aber $M_{\su{F}} = 3$. \\
+Die spontane Emission, bei der ein Photon aus einem angeregten Atom emittiert wird, führt zum Übergang
+zurück in den Grundzustand durch Vakuumquantenfluktuation. Der Grundzustand besteht dabei aus den Niveaus $^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=+\su{\frac{1}{2}}$ und
 $^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=-\su{\frac{1}{2}}$. Da allerdings der $\sigma^{+}$-Übergang bei $^{2}S_{\su{\frac{1}{2}}}$ $M_{\su{J}}=+\su{\frac{1}{2}}$
 nicht in die P-Niveaus möglich ist, reichern sich in dem anderen Zustand die Elektronen an, währenddessen der energetisch niedrigerere Zustand zunehmend weniger besetzt und
 irgendwann sogar leer gepumpt wird.
@@ -115,7 +117,7 @@ Die Transparenz der Dampfzelle nimmt dadurch zu und läuft asymptotisch gegen de
 leer zu pumpen. Dies ist in Abbildung \ref{fig:asymptotisch} dargestellt.
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.6]{pictures/asymptotisch.png}
+    \includegraphics[scale = 0.45]{pictures/asymptotisch.png}
     \caption{Entwicklung der Transparenz unter Einstrahlung des rechtszirkular-polarisierten Lichts.\cite{1}}
     \label{fig:asymptotisch}
 \end{figure}
@@ -155,7 +157,6 @@ dargestellt ist.
     \label{fig:resonanz}
 \end{figure}
 
-\newpage
 \subsection{Quadratischer Zeeman-Effekt}
 Für größere Magnetfelder können Terme höherer Ordnung nicht vernachlässigt werden.
 Durch Lösen der Schrödingergleichung
@@ -171,21 +172,21 @@ mit der Energiedifferenz $\Delta E_{\symup{HF}}$ zwischen den Niveaus $F$ und $F
 zusätzlichen Term proportional zu $B^2$. Die Zeeman-Energie ist abhänig von der Quantenzahl $M_{\symup{F}}$.\\
 Dies wird als quadratischer Zeeman-Effekt bezeichnet.
 
-\subsection{Transiente Effekte}
-Bei der Betrachtung von gepumpten Systemen bei denen die Hochfrequenz innerhalb kürzester Zeit ein- und wieder ausgeschaltet wird,
-ist die Resonanzfreuqenz gegeben durch
-\begin{align*}
-    \omega_{\symup{0}} = 2 \pi \nu_{\symup{0}} = g_{\symup{f}} \frac{\nu_{\su{0}}}{h} B_{\su{0}},
-\end{align*}
-wobei die Larmor-Frequenz durch $\omega_{\su{0}} = \gamma B_{\su{0}}$ mit dem gyromagnetischen Verhältnis
-$\gamma = g_{\su{f}} \frac{\mu_{\su{0}}}{h}$ beschrieben wird.
-Für den Resonanzfall ergibt sich $B_{\text{RF}} = B_{\text{eff}}$.
-\newline
-In diesem Fall folgt die Relation
-\begin{align*}
-    \frac{T_{\su{87}}}{T_{\su{85}}} = \frac{\gamma_{\su{85}}}{\gamma_{\su{87}}}
-\end{align*}
-für die beiden Rubidium-Isotope.
+%\subsection{Transiente Effekte}
+%Bei der Betrachtung von gepumpten Systemen bei denen die Hochfrequenz innerhalb kürzester Zeit ein- und wieder ausgeschaltet wird,
+%ist die Resonanzfreuqenz gegeben durch
+%\begin{align*}
+%    \omega_{\symup{0}} = 2 \pi \nu_{\symup{0}} = g_{\symup{f}} \frac{\nu_{\su{0}}}{h} B_{\su{0}},
+%\end{align*}
+%wobei die Larmor-Frequenz durch $\omega_{\su{0}} = \gamma B_{\su{0}}$ mit dem gyromagnetischen Verhältnis
+%$\gamma = g_{\su{f}} \frac{\mu_{\su{0}}}{h}$ beschrieben wird.
+%Für den Resonanzfall ergibt sich $B_{\text{RF}} = B_{\text{eff}}$.
+%\newline
+%In diesem Fall folgt die Relation
+%\begin{align*}
+%    \frac{T_{\su{87}}}{T_{\su{85}}} = \frac{\gamma_{\su{85}}}{\gamma_{\su{87}}}
+%\end{align*}
+%für die beiden Rubidium-Isotope.
 
 \newpage
 \section{Aufbau}
@@ -197,11 +198,12 @@ In Abbildung \ref{fig:aufbau} ist der verwendete Versuchsaufbau dargestellt.
     \label{fig:aufbau}
 \end{figure}
 \newline
-Das aus der Spektrallampe austretende Licht wird mithilfe einer Sammellinse kollimiert und durch einen $\text{D}_{\su{1}}$-Filter,
+Das aus der Rubidium-Spektrallampe austretende Licht wird mithilfe einer Sammellinse kollimiert und durch einen $\text{D}_{\su{1}}$-Filter,
 welcher nur die zu untersuchende $\text{D}_{\su{1}}$-Linie der Rubidium-Isotope durchlässt, gefiltert.
 Der Linearpolarisationsfilter und die $\frac{\lambda}{4}$-Platte im Anschluss sorgen dafür, dass das
-aus dem zuvor austretenden Licht zirkular-polarisiertes Licht erzeugt wird. Dieses trifft auf die Dampfzelle, in der
-sich die beiden Rubidium-Isotope befinden. Durch das Beheizen der Dampfzelle wird ein optimaler Rubidium-Dampfdruck
+aus dem zuvor unpolarisierten Licht erst linear-polarisiertes und schließlich zirkular-polarisiertes Licht erzeugt wird.
+Dieses trifft auf die Dampfzelle, in der sich die beiden Rubidium-Isotope befinden.
+Durch das Beheizen der Dampfzelle bei $50\,^{°}\su{C}$ wird ein optimaler Rubidium-Dampfdruck
 eingestellt. Um das durchgetretene Licht auf ein Si-Photoelement zu fokussieren, wird
 eine weitere Sammellinse verwendet. An das Photoelement angeschlossen sind ein Linearverstärker
 und ein Oszilloskop mit dem sich Intensitätsänderungen des Lichtes darstellen lassen.
@@ -214,7 +216,7 @@ Das durch eine weitere Spule entstandendene RF-Feld dient dazu, dass die Energie
 der Horizontalfeldstärke sind.
 
 \section{Durchführung}
-Durch schrittweises Einstellen und Platzieren der beiden Sammellinsen wird die auf den Lichtdetektor
+Durch das Justieren der beiden Sammellinsen wird die auf den Lichtdetektor
 treffende Intensität versucht zu maximieren. Nach dem Einsetzen zusätzlicher optischer Elemente wird
 der Versuchausaufbau durch eine Decke abgedunkelt.
 
@@ -228,10 +230,3 @@ Damit die Resonanzstellen der unterschiedlichen Frequenzen auf dem Oszilloskop z
 das Feld der Horizontalspule dementsprechend erhöht.
 Ab einer Frequenz von ungefähr 200\,kHz muss ein weiteres horizontales Feld angelegt werden. Dies führt dazu,
 dass der Bereich des Sweep-Feldes auf die einzelnen Resonanzen verschoben werden kann.
-
-Nachdem die Ausgangsfrequenz von 100\,kHz und das Magnetfeld wieder auf die erste Resonanzstelle eingestellt ist,
-wird eine Rechteckspannung von $0-5$\,V und mit einer Frequenz von 5\,Hz eingespeist. Dieses Signal
-wird zusammen mit dem Signal des Si-Photoelements über den YT-Modus sichtbar gemacht.
-Anhand der Aufnahmen des Oszilloskops kann über die Flanken der RF-Modulation
-die Periode in Abhänigkeit der Amplitude bestimmt werden. Dafür wird die Amplitude im Bereich von $0,5$\,V bis 10\,V
-in 1\,V Schritten verändert.
