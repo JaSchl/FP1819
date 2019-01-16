@@ -20,6 +20,12 @@
   t_{\su{unverstaerkt}}&= 0,95 \,\mathrm{µs}
 \end{align*}
 Es ist gut zu erkennen, dass bei den unverstärkten Pulsen mehr Störungen auftreten als bei den verstärkten.
+Werden die Pulshöhen betrachtet ist gut zu erkennen, dass die Höhe der unverstärkten Pulse kleiner ist.
+\begin{align*}
+  h_{\symup{v}} &= 3,5\,\si{\volt} \\
+  h_{\symup{uv}} &= \SI{30}{\milli\volt}
+\end{align*}
+
 \subsection{Bestimmung der Foliendicke}
 
 Die gemessenen Pulshöhen und Drücke sind in Tabelle \ref{tab:pulse} zu finden.
@@ -48,17 +54,17 @@ Die gemessenen Pulshöhen und Drücke sind in Tabelle \ref{tab:pulse} zu finden.
 
 In Abbildung \ref{fig:pulse} sind die Werte zu sehen.
 Die linearen Ausgleichsrechnungen wurde mit
-\begin{equation}
+\begin{equation*}
   I = a\cdot p +b
-\end{equation}
+\end{equation*}
 durchgeführt.
 Die erhaltenen Parameter lauten
-\begin{align}
+\begin{align*}
 a_{\symup{oF}} &=(-9,6 \pm 0,8)\,\mathrm{\frac{V}{bar}} &
 b_{\symup{oF}} &=(4,80\pm 0,07)\,\mathrm{V} \\
 a_{\symup{mF}} &=(-5,5 \pm 1,3)\,\mathrm{\frac{V}{bar}} &
 b_{\symup{mF}} &=(3,89\pm 0,08)\,\mathrm{V}
-\end{align}
+\end{align*}
 
 \begin{figure}
   \centering
@@ -72,21 +78,21 @@ Aus der Differenz der y-Achsenabschnitte ergibt sich die Impulshöhendifferenz
 \begin{equation*}
   \Delta I = (0,91\pm 0,11)\,\mathrm{V}
 \end{equation*}
-Die Energie eines $\alpha$-Teilchens beträgt $E_{\alpha} = 5,486\cdot 10^{6}$.\cite{Ealpha}
+Die Energie eines $\alpha$-Teilchens beträgt $E_{\alpha} = 5,486\cdot 10^{6}\,\mathrm{eV}$.\cite{Ealpha}
 Die Differenzenergie ergibt sich durch
 \begin{equation*}
-  \Delta E = \frac{b_{\symup{oF}}}{\Delta I} \cdot E_{\alpha}
+  \Delta E =  E_{\alpha}\cdot\left(1-\frac{b_{\symup{mf}}}{b_{\symup{of}}}\right)
 \end{equation*}
 zu
 \begin{equation}
-  \Delta E = (28,9\pm 3,1) \,\mathrm{MeV}
+  \Delta E = (1,04\pm 0,11) \,\mathrm{MeV}
 \end{equation}
 Die Geschwindigkeit eines $\alpha$-Teilchens berechnet sich mit der Formel
 \begin{equation*}
-  v_{\alpha} = \sqrt{\frac{2E_{\alpha}}{m_{\alpha}}} = 4,519\,\mathrm{\frac{km}{h}}
+  v_{\alpha} = \sqrt{\frac{2E_{\alpha}}{m_{\alpha}}} = (1,548\pm 0,009)\cdot10^7\,\mathrm{\frac{m}{s}}
 \end{equation*}
 Dabei ist $m_{\alpha}$ die Masse des $\alpha$-Teilchens und beträgt $6,64\cdot 10^{-6}\,\mathrm{kg}$.\cite{malpha}
-
+Die Dichte beträgt $19,282\,\mathrm{\frac{g}{cm^3}} $. \cite{rhoau}
 Die Anzahl der Atome N ergibt sich über den Zusammenhang
 \begin{equation}
   N = \frac{\rho}{m_{\symup{Atom}}} = 5.895 \cdot 10^{28} \,\mathrm{\frac{1}{m^3}}
@@ -99,15 +105,48 @@ Mit der Bethe-Bloch-Gleichung (\ref{eqn:bethebloch}) kann nun die Dicke berechne
     \ln\frac{2m_0v^2}{I}}
 \end{equation*}
 z entspricht dabei der Anzahl der Protonen von Helium und Z die Anzahl der Protonen von Gold
-\begin{align}
+\begin{align*}
   z &= 2\\
   Z &= 79
-\end{align}
+\end{align*}
 Die experimentell bestimmte Dicke der Goldfolie beträgt somit
 \begin{equation}
-  dx = (15,5 \pm 1,7)\,\mathrm{µm}
+  dx = (0,51 \pm 0,09)\,\mathrm{µm}
   \label{eqn:Dicke}
 \end{equation}
+
+
+\subsection{Bestimmung der Aktivität}
+
+Die Aktivität wurde gemessen und beträgt $(2,86 \pm 0,05)\cdot 10^{4}\,\mathrm{s^{-1}}$.
+Sie berechnet sich durch die Formel
+\begin{equation*}
+  A = \frac{C\cdot 4\pi}{d\Omega}.
+\end{equation*}
+Dabei ist C wieder die Zählrate pro Sekunde mit c = 3231 und t = 120\,s.
+d$\Omega$ wird mit der Formel
+\begin{equation*}
+  d\Omega = 4 arctan\left(\frac{x}{2L}\right) arctan\left(\frac{y}{2L}\right)
+\end{equation*}
+berechnet.
+L ist der Abstand vom Detektor zur Folie und beträgt L=4,1\,mm und
+x$\cdot$y entspricht der Fläche der Blende mit x=2\,mm und y=10\,mm.\cite{anleitung}
+Der Raumwinkel ergibt sich zu
+\begin{align*}
+  d\Omega = 0,0118\,\mathrm{sr}
+\end{align*}
+
+Um die theoretisch zu erwartende Aktivität zu berechen wird die Formel
+\begin{equation*}
+  A(t) = A_0 \exp(-\lambda t)
+\end{equation*}
+verwendet.
+Dabei ist $A_0$ die Anfangsaktivität im Jahre 1994 und beträgt $330\,\mathrm{kBq}$.\cite{anleitung}
+Somit entspricht die Zeit t 24 Jahre.
+$\lambda$ beschreibt die Zerfallskonstate und hat den Wert $5,077\cdot 10^{-11}\mathrm{s^{-1}} $.\cite{lambda}
+\begin{equation*}
+  A(t) = 317,56\,\mathrm{kBq}
+\end{equation*}
 
 \subsection{Untersuchung des differentiellen Wirkungsquerschnittes}
 
@@ -118,87 +157,56 @@ Die Werte sind in Tabelle \ref{tab:wirkung} zu finden.
   \centering
   \caption{Die Zählrate in Abhängigkeit des Winkels}
   \label{tab:wirkung}
-  \begin{tabular}{c c c}
+  \begin{tabular}{c c c c c c}
     \toprule
-    $\theta$/ ° & $\symup{c}$ & $\symup{t}$/ \si{\second} \\
+    $\theta$/ ° & $\symup{c}$ & $\symup{t}$/ \si{\second} & C=$\symup{\frac{c}{t}}$ / $\mathrm{s^{-1}}$ &
+    $\frac{d\sigma}{d\Omega}_c \cdot 10^{3}$/ $\mathrm{b/sr}$ &
+    $\frac{d\sigma}{d\Omega}_s \cdot 10^{-23}$ / $\mathrm{b/sr}$ \\
     \midrule
-1,1  & 1213 & 300\\
-1,4  & 1361 & 300\\
-1,6  & 1472 & 300\\
-1,8  & 1491 & 300\\
-2,0  & 1498 & 300\\
-2,5  & 1703 & 300\\
-3,0  & 1671 & 300\\
-4,0  & 1810 & 300\\
-8,0  & 1235 & 300\\
-10,0 & 630  & 300\\
-15,0 & 176  & 600\\
-20,0 & 62   & 900\\
+1,1  & 1213 & 300 & (4,04\pm 0,12) & (1500,40\pm 299,64) & 1266,06\\
+1,4  & 1361 & 300 & (4,54\pm 0,12) & (1687,55\pm 335,82) & 482,53\\
+1,6  & 1472 & 300 & (4,91\pm 0,13) & (1825,75\pm 362,95) & 282,86\\
+1,8  & 1491 & 300 & (4,97\pm 0,13) & (1848,75\pm 367,59) & 176,59\\
+2,0  & 1498 & 300 & (4,99\pm 0,13) & (1857,43\pm 369,31) & 115,87\\
+2,5  & 1703 & 300 & (5,68\pm 0,14) & (2111,61\pm 419,42) & 47,47\\
+3,0  & 1671 & 300 & (5,57\pm 0,14) & (2071,93\pm 411,60) & 22,89\\
+4,0  & 1810 & 300 & (6,03\pm 0,14) & (2244,29\pm 445,57) & 7,25\\
+8,0  & 1235 & 300 & (4,12\pm 0,14) & (1531,32\pm 305,01) & 0,45\\
+10,0 & 630  & 300 & (2,10\pm 0,08) & (781,16\pm 157,11) & 0,19\\
+15,0 & 176  & 600 & (0,29\pm 0,02) & (109,11\pm 23,03)  & 0,04\\
+20,0 & 62   & 900 & (0,07\pm 0,001) & (25,63\pm 6,01)  & 0,01\\
     \bottomrule
   \end{tabular}
 \end{table}
-Der Fehler für die Zälrate pro sekunde ergibt sich durch
+Der Fehler für die Zählrate pro Sekunde ergibt sich durch
 \begin{equation*}
-  \Delta c = \sqrt{\frac{c}{t}}
+  \Delta C = \sqrt{c}/t
 \end{equation*}
 Um den differenziellen Wirkungsquerschnitt zu bestimmen wird die Formel
 \begin{equation}
-  \frac{d\sigma}{d\Omega}\left(\Theta\right) = \frac{c}{A N dx d\Omega^2}
+  \frac{d\sigma}{d\Omega}\left(\Theta\right) = \frac{CV_{\symup{mol}}}{A N_a G dx^2 d\Omega}
   \label{eqn:wqc}
 \end{equation}
 verwendet.
-Hier entspricht A der Aktivität der Am-Quelle.
-Diese wurde gemessen und beträgt $26,92\,\mathrm{s^{-1}}$
-d$\Omega$ wird mit der Formel
-\begin{equation*}
-  d\Omega = 4 arctan\left(\frac{x}{2L}\right) arctan\left(\frac{y}{2L}\right)
-\end{equation*}
-berechnet.
-L ist der Abstand vom Detektor zur Folie und beträgt L=4,1\,mm und
-x$\cdot$y entspricht der Fläche der Blende mit x=2\,mm und y=10\,mm.\cite{anleitung}
+Hier entspricht A der theoretisvhen Aktivität der Am-Quelle.
+
 Der Fehler ergibt sich durch
 \begin{equation*}
-  \Delta\frac{d\sigma}{d\Omega}\left(\Theta\right) = \sqrt{\left(\frac{\Delta c}{A N dx d\Omega^2}\right)^2}
+  \Delta\frac{d\sigma}{d\Omega}\left(\Theta\right) = \sqrt{\left(\frac{\Delta C V}{A N_a G dx^2 d\Omega}\right)^2
+  + \left(-\frac{\Delta dx C V}{A N_a G dx^3 d\Omega}\right)^2}
 \end{equation*}
-Der Raumwinkel ergibt sich zu
-\begin{align*}
-  d\Omega = 0,0118
-\end{align*}
-Die Ergebnisse für die Wirkungsquerschnitte sind in Tabelle \ref{tab:wirkung2} zu finden.
+
+Die Ergebnisse für die Wirkungsquerschnitte sind in Tabelle \ref{tab:wirkung} zu finden.
 $\sfrac{d\sigma}{d\Omega}_c$ entspricht dem mit Formel (\ref{eqn:wqc}) und $\sfrac{d\sigma}{d\Omega}_s$ dem mit
 Formel (\ref{eqn:wqs}) bestimmten Wirkungsquerschnitt.
 
-\begin{table}[H]
-  \centering
-  \caption{berechnete Wirkungsquerschnitte}
-  \label{tab:wirkung2}
-  \begin{tabular}{c c c c}
-    \toprule
-    $\theta$/ ° & $\symup{\frac{c}{t}}$ / $\mathrm{s^{-1}}$ &
-    $\frac{d\sigma}{d\Omega}_c \cdot 10^{-21}$/ $\mathrm{m^{-1}}$ &
-    $\frac{d\sigma}{d\Omega}_s \cdot 10^{-23}$ / $\mathrm{m^{-1}}$ \\
-    \midrule
-1,1  & (4,04\pm 2,01) & (48,11\pm 5,19) & 1266,06 \\
-1,4  & (4,54\pm 2,13) & (53,98\pm 5,82) & 482,53  \\
-1,6  & (4,91\pm 2,22) & (58,38\pm 6,30) & 282,86  \\
-1,8  & (4,97\pm 2,23) & (59,13\pm 6,38) & 176,59  \\
-2,0  & (4,99\pm 2,23) & (59,41\pm 6,41) & 115,87  \\
-2,5  & (5,68\pm 2,38) & (67,54\pm 7,29) & 47,47   \\
-3,0  & (5,57\pm 2,36) & (66,27\pm 7,15) & 22,89   \\
-4,0  & (6,03\pm 2,46) & (71,78\pm 7,74) & 7,25   \\
-8,0  & (4,12\pm 2,03) & (48,98\pm 5,28) & 0,45   \\
-10,0 & (2,10\pm 1,45) & (24,99\pm 2,70) & 0,19   \\
-15,0 & (0,29\pm 0,54) & (6,98\pm 0,75)  & 0,04   \\
-20,0 & (0,07\pm 0,26) & (2,46\pm 0,27)  & 0,01   \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-In Abbildung \ref{fig:wirkung} ist der Wirkungsquerschnitt gegen den Winkel aufgetragen zu sehen.
+
+In Abbildung \ref{fig:wirkung} ist der differentielle Wirkungsquerschnitt gegen den Winkel aufgetragen zu sehen.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{plotdsigmadomega.pdf}
-  \caption{Der wirkungsquerschnitt gegen den Winkel}
+  \caption{Der Wirkungsquerschnitt gegen den Winkel}
   \label{fig:wirkung}
 \end{figure}
 
@@ -208,19 +216,35 @@ wird die Zählrate c für eine 4$\mu$m dicke Goldfolie aufgenommen
 Dies wird für einen Winkel von 5° gemacht.
 Gemessen wurde c = 9 bei einer Messzeit von 600\,s
 Da für die 2 $\mu$m dicke Goldfolie nicht bei einem Winkel von 5° gemessen wurde,
-wird über die Messungen bei 4 und 8° gemittelt.
+wird eine Regression mit Hilfe der Werte aus  \ref{tab:wirkung} durchgeführt.
+Diese ist in Abbildung \ref{fig:reg} zu sehen.
 Die Ergebnisse sind in Tabelle \ref{tab:Streuung} zusammengefasst
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{plotdsigmadomegaregression.pdf}
+  \caption{Regression mit Hilfe der Tabelle \ref{tab:wirkung}}
+  \label{fig:reg}
+\end{figure}
+Die Regression wurde mit
+\begin{equation*}
+  C(\Theta) = C_0 \cdot \symup{e}^{a\Theta}
+\end{equation*}
+Die ermittelten Parameter lauten
+\begin{align*}
+  C_0 &= (12,473\pm0,001)\,\mathrm{s^{-1}}\\
+  a &=  (-9,76\pm0,08)\,\mathrm{1/rad}
+\end{align*}
 
 \begin{table}[H]
   \centering
-  \caption{Messwerte der Zählrate c}
+  \caption{ Zählrate C bei 5°}
   \label{tab:Streuung}
-  \begin{tabular}{c c}
+  \begin{tabular}{c c c}
     \toprule
-    dx / $\mathrm{\mu m}$ & c/ $s^{-1}$ \\
+    dx / $\mathrm{\mu m}$ & C/ $s^{-1}$ & $\frac{d\sigma}{d\Omega}/ \mathrm{b/sr}$\\
     \midrule
-    2 & (5,074\pm 0,958) \\
-    4 & 0,015\\
+    2 & (5,320\pm 0,040)& (2,0\pm0,4)\cdot $10^6$\\
+    4 & (0,015\pm 0,005)& (5,6\pm2,2)\cdot $10^3$ \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -233,15 +257,15 @@ Das N wird mit Formel (\ref{eqn:N}) berechnet.
   \centering
   \caption{Z-Abhängigkeit unterschiedlicher Folien}
   \label{tab:z}
-  \begin{tabular}{c c c c c c c}
+  \begin{tabular}{c c c c c c c c}
     \toprule
-    Material & Z & A & $\rho / \, \mathrm{g/cm^{3}}$ & c / $\mathrm{s^{-1}}$ &
-    N $\cdot 10^{28} / \mathrm{m^{-3}}$
-    & $\frac{c}{Ndx}\cdot 10^{-24} / \mathrm{m^{2}s^{-1}}$ \\
+    Material & $d/\mathrm{\mu m}$ & Z & A & $\rho / \, \mathrm{g/cm^{3}}$ & c / $\mathrm{s^{-1}}$
+    & N $\cdot 10^{10} / \mathrm{m^{-3}}$
+    & $\frac{C}{Ndx}\cdot 10^{-24} / \mathrm{m^{2}s^{-1}}$ \\
     \midrule
-    Gold      & 79 & 197 & 19,282 & (5,07\pm 0,96) & 5,894 & (43,044\pm 8,127)\\
-    Bismut    & 83 & 209 & 9,807  & (0,35\pm 0,05) & 2,826 & (6,192\pm 0,885)\\
-    Aluminium & 13 & 27  & 2,698  & (0,68\pm 0,06) & 6,018 & (5,650\pm 0,499)\\
+    Gold      & 2 & 79 & 197 & 19,282 & (5,07\pm 0,96) & 47,155 & (89,774\pm 16,950)\\
+    Bismut    & 1 & 83 & 209 & 9,807  & (0,35\pm 0,05) & 2,826 & (1,077\pm 0,154)\\
+    Aluminium & 3 & 13 & 27  & 2,698  & (0,68\pm 0,06) & 16,248 & (0,721\pm 0,064)\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -258,17 +282,50 @@ In Abbildung \ref{fig:zabhängigkeit} ist $\sfrac{c}{Ndx}$ gegen die Kernladungs
   \label{fig:zabhängigkeit}
 \end{figure}
 
+\section{Bremsvermögen von $\alpha$-Teilchen in Luft}
+Der Energieverlust der $\alpha$-Teilchen kann mit der Bethe-Bloch-Gleichung \ref{eqn:bethebloch} berechnet werden.
+Dafür wird nur berücksichtigt, dass Luft aus 20\% Stickstoff und 78\% Sauerstoff besteht.
+
+\begin{table}[H]
+  \centering
+  \caption{Eigenschaften von luft  \cite{luft}}
+  \label{tab:aalph}
+  \begin{tabular}{c c c c}
+    \toprule
+    Material & Z & A & I/$\mathrm{eV}$\\
+    \midrule
+    Sauerstoff & 8 & 16 & 13,62 \\
+    Stickstoff & 7 & 14 & 14,53 \\
+    Mittelwert & (7,50\pm 0,35) & (15,0\pm0,7) & (14,07\pm0,32) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Die restlichen zur Berechnung benötigten werte werden aus Kapitel 4.2 genommen.
+Die Berechnung von N erfolgt nach Formel (\ref{eqn:N}).
+Die Dichte vn Luft beträgt
+\begin{align*}
+  \rho_{\symup{Luft}} = 1,293\,\mathrm{\frac{kg}{m^3}}
+\end{align*}\cite{dichte}
+Der Energieverlust ergibt sich zu
+\begin{equation*}
+  \frac{dE}{dx} = (5,266\pm0,026)\,\mathrm{\frac{J}{m}}
+\end{equation*}
+Mit dem idealen Gasgesetz
+\begin{equation*}
+  p =\frac{\rho R  T}{M}
+\end{equation*}
+ergibt sich für den Druck ein Wert von $0,109\, \mathrm{kPa}$
+R beschreibt dabei die ideale Gaskonstante, T die Temperatur bei 20°C
+und M = 28,96\,g/mol die Molmasse von Luft. \cite{molluft}
 \section{Diskussion}
 
 Bei dem Vergleich der Pulse wurden die Anstiegszeiten per Augenmaß abgelesen.
 Das ist eine Fehlerquelle des Versuchs.
-Hinzu kommt, dass die unverstärkten Pulse nicht ganz den zu erwartenden Verlauf aufweisen.
-Dies kann an äußeren Einflüssen wie der Beleuchtung liegen oder an einem Fehler bei der Aufnahme der Bilder.
+Eine  weitere Fehlerquelle verbirgt sich in den äußeren Einflüssen wie der Beleuchtung
+oder in Fehlern bei der Aufnahme der Bilder.
 
-Die experimentell bestimmte Foliendicke (\ref{eqn:Dicke}) weicht um ca. 670\% von dem zu erwartenden Wert von
-2\,µm ab. Für die Berechnung wurde davon ausgegangen,
-dass die beiden Geraden aus Abbildung \ref{fig:pulse} parallel zueinander stehen.
-Wie zu sehen, ist dies nicht ganz der Fall.
+Die experimentell bestimmte Foliendicke (\ref{eqn:Dicke}) weicht um ca. 74,3\% von dem zu erwartenden Wert von
+2\,µm ab..
 Zusätzlich ist nicht gewährleistet, dass die $\alpha$-Teilchen nicht schräg auf die Folie treffen,
 da die Einstellung nur per Augenmaß möglich war.
 Da die Abweichung aber so groß ist, kann auch nicht ausgeschlossen werden, dass ein Berechnungsfehler vor liegt.
@@ -279,10 +336,11 @@ Einen Einfluss auf diese Abweichungen könnte die Mehrfachstreuung haben.
 Wenn das Teilchen in einem kleinen Winkel streut, steht es im Einfluss der Coulombabstoßung mehrerer Atome.
 In diesem Fall gilt die Rutherfordsche Streuformel nicht mehr.
 Geht der Winkel gegen 0°, geht der Wirkungsquerschnitt gegen unendlich.
-Dies ist physikalisch unlogisch.
+Dies ist in der Realit.ät nicht möglich.
 
 Im nächsten Teil konnte kein guter Vergleich zwischen den beiden Foliendicken getroffen werden, da nicht bei gleichen Winkeln gemessen wurde.
 Es kann aber gesagt werden, dass die erhaltenen Werte eher abwegig sind.
+Dies war aber schon zu erwarten, da die gemessene Zählrate von 9 viel zu niedrig ist.
 
 Da auf die im letzten Versuchsteil bestimmte Zählrate zurückgegriffen wird, scheint auch das Ergebnis dieses Teils nicht ganz stimmig.
 da die Kernladuungszahl quadratisch in den Wirkungsquerschnitt eingeht ist ein parabelförmiger Zusammenhang zu erwarten.
